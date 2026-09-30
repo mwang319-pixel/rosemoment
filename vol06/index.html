@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#8e1837">
+  <meta name="robots" content="noindex,nofollow">
+  <title>玫瑰文化一刻｜Kiri 专访</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&amp;family=Noto+Serif+SC:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    /* ===========================================
+       主题变量：修改这里即可整体换色或换字体
+       =========================================== */
+    :root {
+      --ink: #33272a;
+      --muted: #74676a;
+      --rose: #d93f6b;
+      --rose-dark: #8e1837;
+      --blush: #f4dde3;
+      --pale: #fbf4f5;
+      --warm: #f7efef;
+      --paper: #fffdfd;
+      --white: #ffffff;
+      --dark: #40292e;
+      --line: #d8c9cd;
+      --dark-line: #7b646a;
+      --pink-light: #f28aa7;
+
+      --font-display: "Noto Serif SC", "Songti SC", serif;
+      --font-body: "Noto Sans SC", "PingFang SC", sans-serif;
+
+      --title-size: clamp(1.8rem, min(4.1vw, 7vh), 4rem);
+      --h2-size: clamp(1.45rem, min(3.15vw, 5.3vh), 3.1rem);
+      --h3-size: clamp(1rem, min(1.8vw, 3.2vh), 1.75rem);
+      --body-size: clamp(0.65rem, min(1.35vw, 2.25vh), 1.1rem);
+      --small-size: clamp(0.58rem, min(0.86vw, 1.55vh), 0.78rem);
+      --slide-padding: clamp(1rem, 4vw, 4rem);
+      --content-gap: clamp(0.5rem, 2vw, 2rem);
+      --element-gap: clamp(0.25rem, 1vw, 1rem);
+      --page-x: clamp(1.6rem, 5.6vw, 5.5rem);
+      --page-top: clamp(4.4rem, 13vh, 7rem);
+      --page-bottom: clamp(2.6rem, 7.4vh, 4.8rem);
+
+      --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
+      --duration: 720ms;
+    }
+
+    /* ===========================================
+       VIEWPORT FITTING: MANDATORY BASE STYLES
+       Include this ENTIRE file in every presentation.
+       These styles ensure slides fit exactly in the viewport.
+       =========================================== */
+
+    /* 1. Lock html/body to viewport */
+    html, body {
+        height: 100%;
+        overflow-x: hidden;
+    }
+
+    html {
+        scroll-snap-type: y mandatory;
+        scroll-behavior: smooth;
+    }
+
+    /* 2. Each slide = exact viewport height */
+    .slide {
+        width: 100vw;
+        height: 100vh;
+        height: 100dvh; /* Dynamic viewport height for mobile browsers */
+        overflow: hidden; /* CRITICAL: Prevent ANY overflow */
+        scroll-snap-align: start;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    /* 3. Content container with flex for centering */
+    .slide-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-height: 100%;
+        overflow: hidden; /* Double-protection against overflow */
+        padding: var(--slide-padding);
+    }
+
+    /* 4. ALL typography uses clamp() for responsive scaling */
+    :root {
+        /* Titles scale from mobile to desktop */
+        --title-size: clamp(1.5rem, 5vw, 4rem);
+        --h2-size: clamp(1.25rem, 3.5vw, 2.5rem);
+        --h3-size: clamp(1rem, 2.5vw, 1.75rem);
+
+        /* Body text */
+        --body-size: clamp(0.75rem, 1.5vw, 1.125rem);
+        --small-size: clamp(0.65rem, 1vw, 0.875rem);
+
+        /* Spacing scales with viewport */
+        --slide-padding: clamp(1rem, 4vw, 4rem);
+        --content-gap: clamp(0.5rem, 2vw, 2rem);
+        --element-gap: clamp(0.25rem, 1vw, 1rem);
+    }
+
+    /* 5. Cards/containers use viewport-relative max sizes */
+    .card, .container, .content-box {
+        max-width: min(90vw, 1000px);
+        max-height: min(80vh, 700px);
+    }
+
+    /* 6. Lists auto-scale with viewport */
+    .feature-list, .bullet-list {
+        gap: clamp(0.4rem, 1vh, 1rem);
+    }
+
+    .feature-list li, .bullet-list li {
+        font-size: var(--body-size);
+        line-height: 1.4;
+    }
+
+    /* 7. Grids adapt to available space */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+        gap: clamp(0.5rem, 1.5vw, 1rem);
+    }
+
+    /* 8. Images constrained to viewport */
+    img, .image-container {
+        max-width: 100%;
+        max-height: min(50vh, 400px);
+        object-fit: contain;
+    }
+
+    /* ===========================================
+       RESPONSIVE BREAKPOINTS
+       Aggressive scaling for smaller viewports
+       =========================================== */
+
+    /* Short viewports (< 700px height) */
+    @media (max-height: 700px) {
+        :root {
+            --slide-padding: clamp(0.75rem, 3vw, 2rem);
+            --content-gap: clamp(0.4rem, 1.5vw, 1rem);
+            --title-size: clamp(1.25rem, 4.5vw, 2.5rem);
+            --h2-size: clamp(1rem, 3vw, 1.75rem);
+        }
+    }
+
+    /* Very short viewports (< 600px height) */
+    @media (max-height: 600px) {
+        :root {
+            --slide-padding: clamp(0.5rem, 2.5vw, 1.5rem);
+            --content-gap: clamp(0.3rem, 1vw, 0.75rem);
+            --title-size: clamp(1.1rem, 4vw, 2rem);
+            --body-size: clamp(0.7rem, 1.2vw, 0.95rem);
+        }
+
+        /* Hide non-essential elements */
+        .nav-dots, .keyboard-hint, .decorative {
+            display: none;
+        }
+    }
+
+    /* Extremely short (landscape phones, < 500px height) */
+    @media (max-height: 500px) {
+        :root {
+            --slide-padding: clamp(0.4rem, 2vw, 1rem);
+            --title-size: clamp(1rem, 3.5vw, 1.5rem);
+            --h2-size: clamp(0.9rem, 2.5vw, 1.25rem);
+            --body-size: clamp(0.65rem, 1vw, 0.85rem);
+        }
+    }
+
+    /* Narrow viewports (< 600px width) */
+    @media (max-width: 600px) {
+        :root {
+            --title-size: clamp(1.25rem, 7vw, 2.5rem);
+        }
+
+        /* Stack grids vertically */
+        .grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* ===========================================
+       REDUCED MOTION
+       Respect user preferences
+       =========================================== */
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation-duration: 0.01ms !important;
+            transition-duration: 0.2s !important;
+        }
+
+        html {
+            scroll-behavior: auto;
+        }
+    }
+
+    /* ===========================================
+       基础样式与全局排版
+       =========================================== */
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scrollbar-width: none;
+      background: var(--ink);
+    }
+
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+      display: none;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: var(--font-body);
+      font-size: var(--body-size);
+      line-height: 1.55;
+      letter-spacing: 0;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    button,
+    a {
+      color: inherit;
+      font: inherit;
+    }
+
+    button {
+      border: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    blockquote {
+      margin: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    blockquote {
+      font-family: var(--font-display);
+      letter-spacing: 0;
+    }
+
+    .slide {
+      isolation: isolate;
+      background: var(--paper);
+    }
+
+    .slide-content {
+      justify-content: flex-start;
+      padding: var(--page-top) var(--page-x) var(--page-bottom);
+    }
+
+    .masthead {
+      position: absolute;
+      z-index: 5;
+      top: clamp(0.8rem, 3.2vh, 1.8rem);
+      right: var(--page-x);
+      left: var(--page-x);
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding-bottom: clamp(0.45rem, 1.5vh, 0.9rem);
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: var(--small-size);
+      line-height: 1;
+    }
+
+    .brand {
+      justify-self: start;
+      color: var(--ink);
+      font-family: var(--font-display);
+      font-size: clamp(0.76rem, min(1.35vw, 2.2vh), 1.2rem);
+      font-weight: 600;
+    }
+
+    .section-label {
+      justify-self: center;
+      text-transform: uppercase;
+    }
+
+    .page-number {
+      justify-self: end;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .values-line {
+      position: absolute;
+      z-index: 5;
+      right: var(--page-x);
+      bottom: clamp(0.55rem, 2vh, 1rem);
+      left: var(--page-x);
+      text-align: center;
+      color: var(--muted);
+      font-size: clamp(0.54rem, min(0.74vw, 1.3vh), 0.7rem);
+    }
+
+    .dark .masthead {
+      border-color: var(--dark-line);
+      color: #d8c5ca;
+    }
+
+    .dark .brand,
+    .dark .values-line {
+      color: var(--white);
+    }
+
+    .eyebrow {
+      color: var(--rose);
+      font-size: clamp(0.65rem, min(1.12vw, 1.9vh), 0.95rem);
+      font-weight: 700;
+    }
+
+    .display-title {
+      max-width: min(66vw, 900px);
+      font-size: var(--title-size);
+      font-weight: 600;
+      line-height: 1.18;
+    }
+
+    .slide-title {
+      font-size: var(--h2-size);
+      font-weight: 600;
+      line-height: 1.25;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: clamp(0.72rem, min(1.5vw, 2.45vh), 1.2rem);
+      line-height: 1.55;
+    }
+
+    .body-copy {
+      font-size: var(--body-size);
+      line-height: 1.7;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .accent {
+      color: var(--rose-dark);
+    }
+
+    /* ===========================================
+       动效：进入视口后才分层出现
+       =========================================== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(clamp(0.8rem, 2.2vh, 1.5rem));
+      transition:
+        opacity var(--duration) var(--ease-editorial),
+        transform var(--duration) var(--ease-editorial);
+      transition-delay: calc(var(--order, 0) * 90ms + 80ms);
+    }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(calc(-1 * clamp(1rem, 3vw, 2.8rem)));
+      transition:
+        opacity var(--duration) var(--ease-editorial),
+        transform var(--duration) var(--ease-editorial);
+      transition-delay: calc(var(--order, 0) * 90ms + 80ms);
+    }
+
+    .slide.visible .reveal,
+    .slide.visible .reveal-left {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+
+    /* ===========================================
+       固定演示控制：进度、页点、全屏
+       =========================================== */
+    .progress-track {
+      position: fixed;
+      z-index: 90;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: clamp(0.12rem, 0.24vh, 0.18rem);
+      background: rgb(255 255 255 / 18%);
+    }
+
+    .progress-bar {
+      width: 12.5%;
+      height: 100%;
+      background: var(--rose);
+      transform-origin: left;
+      transition: width 360ms var(--ease-editorial);
+    }
+
+    .nav-dots {
+      position: fixed;
+      z-index: 90;
+      top: 50%;
+      right: clamp(0.55rem, 1.4vw, 1.25rem);
+      display: flex;
+      flex-direction: column;
+      gap: clamp(0.38rem, 1vh, 0.62rem);
+      transform: translateY(-50%);
+    }
+
+    .nav-dot {
+      width: clamp(0.42rem, 0.72vw, 0.6rem);
+      height: clamp(0.42rem, 0.72vw, 0.6rem);
+      padding: 0;
+      border: 1px solid rgb(142 24 55 / 55%);
+      border-radius: 50%;
+      background: rgb(255 255 255 / 70%);
+      cursor: pointer;
+      transition:
+        transform 240ms ease,
+        background 240ms ease,
+        border-color 240ms ease;
+    }
+
+    .nav-dot[aria-current="true"] {
+      border-color: var(--rose-dark);
+      background: var(--rose-dark);
+      transform: scale(1.35);
+    }
+
+    .fullscreen-button {
+      position: fixed;
+      z-index: 90;
+      left: clamp(0.55rem, 1.4vw, 1.25rem);
+      bottom: clamp(0.55rem, 1.4vw, 1.25rem);
+      display: grid;
+      width: clamp(2rem, 3.2vw, 2.7rem);
+      height: clamp(2rem, 3.2vw, 2.7rem);
+      place-items: center;
+      border: 1px solid rgb(142 24 55 / 32%);
+      border-radius: 50%;
+      color: var(--rose-dark);
+      background: rgb(255 255 255 / 78%);
+      box-shadow: 0 clamp(0.2rem, 0.6vh, 0.45rem) clamp(0.9rem, 2vw, 1.4rem) rgb(64 41 46 / 12%);
+      cursor: pointer;
+      font-size: clamp(0.9rem, 1.6vw, 1.2rem);
+      line-height: 1;
+      backdrop-filter: blur(clamp(0.25rem, 0.7vw, 0.5rem));
+      transition: transform 220ms ease, background 220ms ease;
+    }
+
+    .fullscreen-button:hover,
+    .fullscreen-button:focus-visible {
+      background: var(--white);
+      transform: scale(1.08);
+      outline: 2px solid var(--rose);
+      outline-offset: clamp(0.1rem, 0.3vw, 0.2rem);
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* ===========================================
+       01 封面
+       =========================================== */
+    .cover {
+      background: var(--warm);
+    }
+
+    .cover::before {
+      position: absolute;
+      z-index: 4;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: clamp(0.5rem, 1.25vw, 1rem);
+      background: var(--rose-dark);
+      content: "";
+    }
+
+    .cover-copy {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      width: 60%;
+      height: 100%;
+      flex-direction: column;
+      justify-content: center;
+      padding: clamp(1.4rem, 5vw, 5rem) clamp(1.8rem, 5.6vw, 5.5rem);
+      gap: clamp(0.35rem, 1.45vh, 0.9rem);
+    }
+
+    .cover-brand {
+      margin-bottom: clamp(0.3rem, 1.8vh, 1rem);
+      font-family: var(--font-display);
+      font-size: clamp(1rem, min(2.2vw, 3.6vh), 1.8rem);
+      font-weight: 600;
+    }
+
+    .cover-volume {
+      color: var(--muted);
+      font-size: var(--small-size);
+    }
+
+    .cover-title {
+      margin-top: clamp(0.5rem, 4vh, 2.5rem);
+      font-size: clamp(1.75rem, min(4.45vw, 7.45vh), 4.45rem);
+      font-weight: 600;
+      line-height: 1.34;
+    }
+
+    .cover-subtitle {
+      color: var(--rose-dark);
+      font-size: clamp(0.8rem, min(1.6vw, 2.7vh), 1.35rem);
+      font-weight: 700;
+    }
+
+    .cover-rule {
+      width: clamp(2.2rem, 4vw, 3.8rem);
+      height: clamp(0.12rem, 0.42vh, 0.24rem);
+      margin-block: clamp(0.2rem, 1.3vh, 0.7rem);
+      background: var(--rose);
+    }
+
+    .cover-quote {
+      max-width: min(48vw, 700px);
+      color: var(--muted);
+      font-family: var(--font-display);
+      font-size: clamp(0.7rem, min(1.55vw, 2.55vh), 1.3rem);
+      line-height: 1.7;
+    }
+
+    .cover-date {
+      margin-top: clamp(0.2rem, 1.8vh, 1rem);
+      color: var(--muted);
+      font-size: var(--small-size);
+    }
+
+    .cover-photo {
+      position: absolute;
+      inset: 0 0 0 60%;
+      background-image: linear-gradient(90deg, rgb(247 239 239 / 14%), transparent 12%), url("./assets/kiri-portrait.jpg");
+      background-position: center 42%;
+      background-size: cover;
+      transform: scale(1.04);
+      transition: transform 1.35s var(--ease-editorial);
+    }
+
+    .cover.visible .cover-photo {
+      transform: scale(1);
+    }
+
+    /* ===========================================
+       02 目录：三块均为可点击入口
+       =========================================== */
+    .contents-intro {
+      display: flex;
+      flex-direction: column;
+      gap: clamp(0.35rem, 1vh, 0.7rem);
+    }
+
+    .toc-grid {
+      display: grid;
+      flex: 1;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: clamp(1.1rem, 5vh, 3.6rem);
+    }
+
+    .toc-item {
+      position: relative;
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: clamp(0.6rem, 2vw, 1.6rem) clamp(0.7rem, 3.2vw, 2.8rem);
+      border-left: 1px solid var(--line);
+      background: transparent;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .toc-item:first-child {
+      padding-left: 0;
+      border-left: 0;
+    }
+
+    .toc-item::after {
+      position: absolute;
+      right: clamp(0.7rem, 3.2vw, 2.8rem);
+      bottom: clamp(0.7rem, 2vh, 1.2rem);
+      left: clamp(0.7rem, 3.2vw, 2.8rem);
+      height: clamp(0.1rem, 0.25vh, 0.16rem);
+      background: var(--rose);
+      content: "";
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 360ms var(--ease-editorial);
+    }
+
+    .toc-item:first-child::after {
+      left: 0;
+    }
+
+    .toc-item:hover::after,
+    .toc-item:focus-visible::after {
+      transform: scaleX(1);
+    }
+
+    .toc-item:focus-visible {
+      outline: 2px solid var(--rose);
+      outline-offset: clamp(0.1rem, 0.3vw, 0.2rem);
+    }
+
+    .toc-num {
+      color: var(--blush);
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, min(5vw, 8vh), 4.8rem);
+      font-weight: 600;
+      line-height: 1;
+      transition: color 260ms ease;
+    }
+
+    .toc-item:hover .toc-num,
+    .toc-item:focus-visible .toc-num {
+      color: var(--rose);
+    }
+
+    .toc-title {
+      margin-top: clamp(0.6rem, 2.5vh, 1.5rem);
+      color: var(--rose-dark);
+      font-family: var(--font-display);
+      font-size: clamp(0.92rem, min(1.9vw, 3.2vh), 1.65rem);
+      font-weight: 600;
+    }
+
+    .toc-desc {
+      margin-top: clamp(0.55rem, 2.1vh, 1.2rem);
+      font-size: clamp(0.64rem, min(1.25vw, 2.1vh), 1rem);
+      line-height: 1.75;
+    }
+
+    .toc-page {
+      margin-top: auto;
+      color: var(--muted);
+      font-size: var(--small-size);
+    }
+
+    /* ===========================================
+       03 文化解码
+       =========================================== */
+    .decode-intro {
+      display: flex;
+      flex-direction: column;
+      gap: clamp(0.35rem, 1.1vh, 0.75rem);
+    }
+
+    .decode-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: clamp(1rem, 5.4vw, 5.5rem);
+      margin-top: clamp(1rem, 5vh, 3.6rem);
+    }
+
+    .decode-block {
+      position: relative;
+      padding-left: clamp(1rem, 3vw, 2.4rem);
+    }
+
+    .decode-block::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: clamp(0.18rem, 0.42vw, 0.34rem);
+      background: var(--rose);
+      content: "";
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform 620ms var(--ease-editorial) 260ms;
+    }
+
+    .visible .decode-block::before {
+      transform: scaleY(1);
+    }
+
+    .decode-block h3 {
+      margin-bottom: clamp(0.55rem, 2vh, 1.2rem);
+      font-size: var(--h3-size);
+    }
+
+    .reflection {
+      margin-top: auto;
+      padding: clamp(0.75rem, 2vh, 1.2rem) clamp(1rem, 3vw, 2.4rem);
+      color: var(--rose-dark);
+      background: var(--pale);
+      font-family: var(--font-display);
+      font-size: clamp(0.8rem, min(1.45vw, 2.45vh), 1.15rem);
+      font-weight: 600;
+      text-align: center;
+    }
+
+    /* ===========================================
+       04 人物开篇
+       =========================================== */
+    .profile {
+      background: var(--pale);
+    }
+
+    .profile-grid {
+      display: grid;
+      height: 100%;
+      grid-template-columns: 36% 1fr;
+      gap: clamp(1.5rem, 5vw, 4.8rem);
+    }
+
+    .profile-photo {
+      min-height: 0;
+      background: url("./assets/kiri-portrait.jpg") center 40% / cover no-repeat;
+      transform: scale(1.03);
+      transition: transform 1.1s var(--ease-editorial);
+    }
+
+    .profile.visible .profile-photo {
+      transform: scale(1);
+    }
+
+    .profile-copy {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      justify-content: center;
+      gap: clamp(0.65rem, 2.4vh, 1.5rem);
+    }
+
+    .profile-quote {
+      padding: clamp(0.8rem, 2.6vh, 1.5rem) clamp(1rem, 3vw, 2.1rem);
+      color: var(--rose-dark);
+      background: var(--blush);
+      font-family: var(--font-display);
+      font-size: clamp(0.75rem, min(1.55vw, 2.55vh), 1.25rem);
+      font-weight: 600;
+      line-height: 1.62;
+    }
+
+    /* ===========================================
+       05 战役复盘
+       =========================================== */
+    .review-grid {
+      display: grid;
+      flex: 1;
+      grid-template-columns: 46% 1fr;
+      gap: clamp(1.5rem, 5vw, 4.5rem);
+      margin-top: clamp(0.8rem, 3.5vh, 2.2rem);
+    }
+
+    .review-copy {
+      display: flex;
+      flex-direction: column;
+      gap: clamp(0.75rem, 3vh, 1.7rem);
+    }
+
+    .review-copy h3 {
+      color: var(--rose-dark);
+      font-size: var(--h3-size);
+    }
+
+    .review-quote {
+      align-self: center;
+      padding: clamp(1.1rem, 4vh, 2.8rem) clamp(1.2rem, 3.6vw, 3.2rem);
+      color: var(--rose-dark);
+      background: var(--blush);
+      font-size: clamp(0.75rem, min(1.45vw, 2.45vh), 1.25rem);
+      font-weight: 600;
+      line-height: 1.65;
+    }
+
+    .review-footnote {
+      padding: clamp(0.45rem, 1.4vh, 0.8rem) clamp(0.8rem, 2vw, 1.6rem);
+      background: var(--pale);
+      font-size: clamp(0.62rem, min(1.1vw, 1.85vh), 0.92rem);
+      text-align: center;
+    }
+
+    /* ===========================================
+       06 九天接力
+       =========================================== */
+    .relay {
+      color: var(--white);
+      background: var(--dark);
+    }
+
+    .relay-layout {
+      display: grid;
+      flex: 1;
+      grid-template-columns: 34% 1fr;
+      gap: clamp(1.2rem, 5vw, 4.6rem);
+      margin-top: clamp(0.7rem, 3vh, 2rem);
+    }
+
+    .relay-total {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      justify-content: center;
+      padding-right: clamp(1rem, 3vw, 2.6rem);
+      border-right: 1px solid var(--dark-line);
+    }
+
+    .relay-number {
+      color: var(--pink-light);
+      font-family: var(--font-display);
+      font-size: clamp(3.2rem, min(7vw, 12vh), 7rem);
+      font-weight: 600;
+      line-height: 0.95;
+    }
+
+    .relay-unit {
+      font-size: clamp(1.2rem, min(2.4vw, 4vh), 2.2rem);
+    }
+
+    .relay-kicker {
+      margin-top: clamp(0.45rem, 1.5vh, 0.8rem);
+      font-size: clamp(0.8rem, min(1.5vw, 2.55vh), 1.2rem);
+      font-weight: 700;
+    }
+
+    .relay-text {
+      margin-top: clamp(0.9rem, 4.5vh, 2.8rem);
+      font-size: clamp(0.64rem, min(1.2vw, 2vh), 1rem);
+      line-height: 1.8;
+    }
+
+    .relay-story {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .relay-stages {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(0.7rem, 3vw, 2.6rem);
+      padding-bottom: clamp(0.9rem, 3vh, 1.8rem);
+      border-bottom: 1px solid var(--dark-line);
+    }
+
+    .stage-days {
+      color: var(--pink-light);
+      font-family: var(--font-display);
+      font-size: clamp(1.35rem, min(3vw, 5vh), 2.8rem);
+      line-height: 1.1;
+    }
+
+    .stage-label {
+      margin-top: clamp(0.2rem, 0.8vh, 0.45rem);
+      color: #d8c5ca;
+      font-size: clamp(0.62rem, min(1.05vw, 1.75vh), 0.9rem);
+    }
+
+    .relay-outcome {
+      margin-top: clamp(1rem, 4vh, 2.5rem);
+      font-size: clamp(0.68rem, min(1.3vw, 2.15vh), 1.05rem);
+      line-height: 1.8;
+    }
+
+    .relay-line {
+      position: relative;
+      margin-top: auto;
+      padding: clamp(0.55rem, 1.8vh, 1rem) 0 clamp(0.55rem, 1.8vh, 1rem) clamp(1rem, 2.5vw, 2rem);
+      color: var(--blush);
+      font-family: var(--font-display);
+      font-size: clamp(0.78rem, min(1.55vw, 2.55vh), 1.3rem);
+      font-weight: 600;
+    }
+
+    .relay-line::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: clamp(0.18rem, 0.45vw, 0.34rem);
+      background: var(--rose);
+      content: "";
+    }
+
+    /* ===========================================
+       07 人物回响
+       =========================================== */
+    .echo-quote {
+      margin-top: clamp(1rem, 4vh, 2.8rem);
+      padding: clamp(1rem, 3.6vh, 2.4rem) clamp(1.2rem, 4vw, 3.6rem);
+      color: var(--rose-dark);
+      background: var(--blush);
+      font-size: clamp(0.75rem, min(1.65vw, 2.8vh), 1.38rem);
+      font-weight: 600;
+      line-height: 1.68;
+    }
+
+    .echo-bottom {
+      display: grid;
+      flex: 1;
+      grid-template-columns: 1fr 18%;
+      align-items: center;
+      gap: clamp(1.2rem, 4vw, 3.6rem);
+      min-height: 0;
+    }
+
+    .echo-copy {
+      display: flex;
+      flex-direction: column;
+      gap: clamp(0.7rem, 2.5vh, 1.5rem);
+    }
+
+    .echo-line {
+      position: relative;
+      padding-left: clamp(0.9rem, 2.3vw, 1.8rem);
+      font-family: var(--font-display);
+      font-size: clamp(0.7rem, min(1.25vw, 2.1vh), 1.05rem);
+      font-weight: 600;
+    }
+
+    .echo-line::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: clamp(0.16rem, 0.38vw, 0.3rem);
+      background: var(--rose);
+      content: "";
+    }
+
+    .rose-art {
+      width: 100%;
+      max-height: min(36vh, 320px);
+      object-fit: contain;
+      filter: saturate(0.92);
+      transform: rotate(-3deg) scale(0.88);
+      transition: transform 900ms var(--ease-editorial) 360ms;
+    }
+
+    .visible .rose-art {
+      transform: rotate(0) scale(1);
+    }
+
+    /* ===========================================
+       08 文化征集
+       =========================================== */
+    .callout {
+      background: var(--blush);
+    }
+
+    .callout-grid {
+      display: grid;
+      height: 100%;
+      grid-template-columns: 1fr 44%;
+      gap: clamp(1.2rem, 4vw, 3.8rem);
+    }
+
+    .callout-copy {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      justify-content: center;
+      gap: clamp(0.65rem, 2.5vh, 1.5rem);
+    }
+
+    .callout-question {
+      margin-top: clamp(0.8rem, 4vh, 2.5rem);
+      font-family: var(--font-display);
+      font-size: clamp(0.92rem, min(2.1vw, 3.55vh), 1.85rem);
+      font-weight: 600;
+      line-height: 1.6;
+    }
+
+    .callout-email {
+      color: var(--rose-dark);
+      font-size: clamp(0.62rem, min(1.2vw, 2vh), 1rem);
+      font-weight: 700;
+      overflow-wrap: anywhere;
+    }
+
+    .callout-tagline {
+      margin-top: auto;
+      color: var(--rose-dark);
+      font-family: var(--font-display);
+      font-size: clamp(0.72rem, min(1.4vw, 2.3vh), 1.15rem);
+      font-weight: 600;
+    }
+
+    .callout-visual {
+      position: relative;
+      display: grid;
+      min-width: 0;
+      grid-template-columns: 58% 42%;
+      align-items: center;
+      gap: clamp(0.2rem, 1vw, 0.8rem);
+    }
+
+    .qr-wrap {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      align-items: center;
+      gap: clamp(0.35rem, 1.2vh, 0.7rem);
+    }
+
+    .qr-image {
+      width: min(100%, 286px);
+      max-height: min(50vh, 400px);
+      box-shadow: 0 clamp(0.35rem, 1vh, 0.8rem) clamp(1rem, 2.8vw, 2.4rem) rgb(64 41 46 / 12%);
+    }
+
+    .mascot-image {
+      width: min(100%, 250px);
+      max-height: min(44vh, 350px);
+      align-self: center;
+      object-fit: contain;
+    }
+
+    .scan-label {
+      color: var(--rose-dark);
+      font-size: clamp(0.62rem, min(1.1vw, 1.85vh), 0.92rem);
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .rules {
+      color: var(--muted);
+      font-size: clamp(0.5rem, min(0.74vw, 1.25vh), 0.68rem);
+      text-align: center;
+    }
+
+    /* ===========================================
+       小屏和矮屏适配：优先保证横屏演示完整
+       =========================================== */
+    @media (max-width: 900px), (max-height: 600px) {
+      :root {
+        --page-x: clamp(1rem, 4vw, 2.4rem);
+        --page-top: clamp(2.8rem, 12vh, 4.2rem);
+        --page-bottom: clamp(1.8rem, 6.5vh, 2.8rem);
+      }
+
+      .masthead {
+        top: clamp(0.55rem, 2.5vh, 1rem);
+      }
+
+      .cover-copy {
+        padding-right: clamp(1rem, 3vw, 2rem);
+      }
+
+      .profile-grid {
+        grid-template-columns: 32% 1fr;
+      }
+
+      .review-grid {
+        grid-template-columns: 48% 1fr;
+      }
+
+      .relay-layout {
+        grid-template-columns: 32% 1fr;
+      }
+
+      .callout-grid {
+        grid-template-columns: 52% 1fr;
+      }
+
+      .values-line {
+        bottom: clamp(0.3rem, 1vh, 0.55rem);
+      }
+
+      .nav-dots {
+        display: none;
+      }
+    }
+
+    @media (max-width: 680px) and (orientation: portrait) {
+      .cover-copy {
+        width: 100%;
+        justify-content: flex-end;
+        padding-bottom: clamp(2.4rem, 8vh, 4.5rem);
+        background: linear-gradient(0deg, var(--warm) 0%, rgb(247 239 239 / 94%) 64%, rgb(247 239 239 / 10%) 100%);
+      }
+
+      .cover-photo {
+        inset: 0;
+        background-position: center 28%;
+      }
+
+      .cover-title,
+      .cover-quote {
+        max-width: 100%;
+      }
+
+      .toc-grid {
+        grid-template-columns: 1fr;
+        margin-top: clamp(0.6rem, 2vh, 1rem);
+      }
+
+      .toc-item {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: clamp(0.5rem, 2vw, 1rem);
+        align-items: center;
+        padding: clamp(0.45rem, 1.5vh, 0.8rem) 0;
+        border-top: 1px solid var(--line);
+        border-left: 0;
+      }
+
+      .toc-title,
+      .toc-desc,
+      .toc-page {
+        margin-top: 0;
+      }
+
+      .toc-desc {
+        display: none;
+      }
+
+      .decode-grid {
+        grid-template-columns: 1fr;
+        gap: clamp(0.65rem, 2.5vh, 1.2rem);
+        margin-top: clamp(0.7rem, 2.5vh, 1.4rem);
+      }
+
+      .profile-grid,
+      .review-grid,
+      .relay-layout,
+      .echo-bottom,
+      .callout-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-photo,
+      .rose-art,
+      .mascot-image {
+        display: none;
+      }
+
+      .relay-total {
+        padding-right: 0;
+        padding-bottom: clamp(0.55rem, 2vh, 1rem);
+        border-right: 0;
+        border-bottom: 1px solid var(--dark-line);
+      }
+
+      .relay-text {
+        margin-top: clamp(0.5rem, 1.5vh, 0.8rem);
+      }
+
+      .callout-visual {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal,
+      .reveal-left,
+      .cover-photo,
+      .profile-photo,
+      .rose-art {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 全局演示控制 -->
+  <div class="progress-track" aria-hidden="true"><div class="progress-bar" id="progressBar"></div></div>
+  <nav class="nav-dots" id="navDots" aria-label="幻灯片导航"></nav>
+  <button class="fullscreen-button" id="fullscreenButton" type="button" title="切换全屏" aria-label="切换全屏">⛶</button>
+  <div class="sr-only" id="pageStatus" aria-live="polite">第 1 页，共 8 页</div>
+
+  <main>
+    <!-- 01 封面 -->
+    <section class="slide cover" id="slide-1" aria-label="封面：玫瑰大将 Kiri 专访">
+      <div class="cover-photo" role="img" aria-label="Kiri 人物照"></div>
+      <div class="cover-copy">
+        <div class="cover-brand reveal-left" style="--order: 0">aroseisarose</div>
+        <div class="eyebrow reveal-left" style="--order: 1">玫瑰文化一刻</div>
+        <div class="cover-volume reveal-left" style="--order: 2">VOL.06&nbsp;&nbsp;/&nbsp;&nbsp;极致引领</div>
+        <h1 class="cover-title reveal-left" style="--order: 3">从完成目标，<br>到让系统更好地赢</h1>
+        <p class="cover-subtitle reveal-left" style="--order: 4">玫瑰大将 Kiri 专访</p>
+        <div class="cover-rule reveal-left" style="--order: 5" aria-hidden="true"></div>
+        <blockquote class="cover-quote reveal-left" style="--order: 6">“我已经做过十年的双十一了，<br>但在玫瑰，我开始从品牌视角参与双十一。”</blockquote>
+        <p class="cover-date reveal-left" style="--order: 7">2026.10</p>
+      </div>
+    </section>
+
+    <!-- 02 本期目录 -->
+    <section class="slide" id="slide-2" aria-label="本期目录">
+      <header class="masthead">
+        <span class="brand">aroseisarose</span>
+        <span class="section-label">CONTENTS&nbsp;&nbsp;本期目录</span>
+        <span class="page-number">02 / 08</span>
+      </header>
+      <div class="slide-content">
+        <div class="contents-intro">
+          <h2 class="slide-title reveal" style="--order: 0">本期内容</h2>
+          <p class="lead reveal" style="--order: 1">先理解行为准则，再进入人物故事，最后回到每个人都能参与的文化日常。</p>
+        </div>
+        <div class="toc-grid">
+          <button class="toc-item reveal" style="--order: 2" type="button" data-go="2" aria-label="前往第 3 页，文化解码">
+            <span class="toc-num">01</span>
+            <span class="toc-title">文化解码</span>
+            <span class="toc-desc">不要将就解，只求更优解<br>行为准则与复盘问题</span>
+            <span class="toc-page">P.03</span>
+          </button>
+          <button class="toc-item reveal" style="--order: 3" type="button" data-go="3" aria-label="前往第 4 页，玫瑰故事">
+            <span class="toc-num">02</span>
+            <span class="toc-title">玫瑰故事</span>
+            <span class="toc-desc">Kiri 专访<br>从目标复盘到九天接力</span>
+            <span class="toc-page">P.04—07</span>
+          </button>
+          <button class="toc-item reveal" style="--order: 4" type="button" data-go="7" aria-label="前往第 8 页，文化一刻征集">
+            <span class="toc-num">03</span>
+            <span class="toc-title">文化一刻征集</span>
+            <span class="toc-desc">分享你看见的<br>真实文化日常</span>
+            <span class="toc-page">P.08</span>
+          </button>
+        </div>
+      </div>
+      <footer class="values-line">以心为本&nbsp;&nbsp;&nbsp;极致引领&nbsp;&nbsp;&nbsp;爱与成就</footer>
+    </section>
+
+    <!-- 03 文化解码 -->
+    <section class="slide" id="slide-3" aria-label="文化解码：不要将就解，只求更优解">
+      <header class="masthead">
+        <span class="brand">aroseisarose</span>
+        <span class="section-label">PART 01&nbsp;&nbsp;文化解码</span>
+        <span class="page-number">03 / 08</span>
+      </header>
+      <div class="slide-content">
+        <div class="decode-intro">
+          <h2 class="slide-title accent reveal" style="--order: 0">不要将就解，只求更优解</h2>
+          <p class="lead reveal" style="--order: 1">【极致引领】以突破为起点，以迭代为方法。它落在每一次目标拆解、现场判断与复盘中。</p>
+        </div>
+        <div class="decode-grid">
+          <article class="decode-block reveal" style="--order: 2">
+            <h3>不要将就解</h3>
+            <p class="body-copy">先看清结果与目标的差距。团队不把“完成了”“差不多”当作答案，而是继续追问：哪一步偏了，哪些方法有效，哪些判断需要重新验证。</p>
+          </article>
+          <article class="decode-block reveal" style="--order: 3">
+            <h3>只求更优解</h3>
+            <p class="body-copy">旧经验提供起点，最终结果决定下一步。围绕真实问题持续沟通和验证，把一次现场解法沉淀为可复用的方法。</p>
+          </article>
+        </div>
+        <p class="reflection reveal" style="--order: 4">复盘时多问一句：这次交付，哪里还能更准、更细、更完整？</p>
+      </div>
+      <footer class="values-line">以心为本&nbsp;&nbsp;&nbsp;极致引领&nbsp;&nbsp;&nbsp;爱与成就</footer>
+    </section>
+
+    <!-- 04 Kiri 人物开篇 -->
+    <section class="slide profile" id="slide-4" aria-label="Kiri 人物开篇">
+      <header class="masthead">
+        <span class="brand">aroseisarose</span>
+        <span class="section-label">PART 02&nbsp;&nbsp;人物开篇</span>
+        <span class="page-number">04 / 08</span>
+      </header>
+      <div class="slide-content">
+        <div class="profile-grid">
+          <div class="profile-photo reveal-left" style="--order: 0" role="img" aria-label="Kiri 人物照"></div>
+          <div class="profile-copy">
+            <h2 class="slide-title reveal" style="--order: 1">十年双十一之后，<br>他选择走进一条更长的路</h2>
+            <blockquote class="profile-quote reveal" style="--order: 2">“我已经做过十年的双十一了，<br>但在玫瑰，我开始从品牌视角参与双十一。”</blockquote>
+            <p class="body-copy reveal" style="--order: 3">入职玫瑰一年半，他已经与团队经历真实战役。过去的经验让他熟悉“如何卖出更多”，来到玫瑰后，他把问题放进品牌长期建设里：帮助用户买对，也和团队一起创造值得被选择的好东西。</p>
+            <p class="body-copy muted reveal" style="--order: 4">当被问到为什么选择玫瑰，他用“缘分”概括这段关系。个人经验与品牌发展的需要在这里相遇。</p>
+          </div>
+        </div>
+      </div>
+      <footer class="values-line">以心为本&nbsp;&nbsp;&nbsp;极致引领&nbsp;&nbsp;&nbsp;爱与成就</footer>
+    </section>
+
+    <!-- 05 战役复盘 -->
+    <section class="slide" id="slide-5" aria-label="Kiri 专访：战役复盘">
+      <header class="masthead">
+        <span class="brand">aroseisarose</span>
+        <span class="section-label">PART 02&nbsp;&nbsp;战役复盘</span>
+        <span class="page-number">05 / 08</span>
+      </header>
+      <div class="slide-content">
+        <h2 class="slide-title reveal" style="--order: 0">目标有高低，复盘必须留下方法</h2>
+        <div class="review-grid">
+          <div class="review-copy">
+            <p class="body-copy reveal" style="--order: 1">目标有完成得好的，也有不及预期的。他要求团队在每场战役结束后回到真实复盘中：目标设定是否合理，哪些策略有效，外部环境带来了什么变化。822 场次又从“导演视角”重新调整直播玩法。</p>
+            <div class="reveal" style="--order: 2">
+              <h3>低谷里的团队状态</h3>
+              <p class="body-copy muted">他最担心团队心态散掉。但运营中心大部分伙伴保持稳定，玫瑰的底层色彩在这群伙伴身上体现得很扎实。</p>
+            </div>
+          </div>
+          <blockquote class="review-quote reveal" style="--order: 3">“目标没达成，当时的心态会觉得是个下降的过程。<br><br>在这种低谷期，最害怕的是团队心态散了。<br>但运营中心大部分伙伴还是比较稳定的。”</blockquote>
+        </div>
+        <p class="review-footnote reveal" style="--order: 4">去年双十一，有伙伴前一晚跟播到凌晨，第二天赶最早一班火车返汉，马上拾起下一阶段待办。</p>
+      </div>
+      <footer class="values-line">以心为本&nbsp;&nbsp;&nbsp;极致引领&nbsp;&nbsp;&nbsp;爱与成就</footer>
+    </section>
+
+    <!-- 06 九天接力 -->
+    <section class="slide relay dark" id="slide-6" aria-label="Kiri 专访：九天样品接力">
+      <header class="masthead">
+        <span class="brand">aroseisarose</span>
+        <span class="section-label">PART 02&nbsp;&nbsp;九天接力</span>
+        <span class="page-number">06 / 08</span>
+      </header>
+      <div class="slide-content">
+        <h2 class="slide-title reveal" style="--order: 0">先把现场接住，再把补位变成能力</h2>
+        <div class="relay-layout">
+          <div class="relay-total reveal-left" style="--order: 1">
+            <div class="relay-number"><span data-count="9">9</span><span class="relay-unit">天</span></div>
+            <p class="relay-kicker">连续样品支持</p>
+            <p class="relay-text">上海直播中心面对人手紧张，主动协调伙伴，先接住现场执行。样品支持要核对品序、摆放样品、递送物料，并及时归位配件。他称这是“体力加脑力”。</p>
+          </div>
+          <div class="relay-story">
+            <div class="relay-stages">
+              <div class="reveal" style="--order: 2"><p class="stage-days">5天</p><p class="stage-label">预热加购</p></div>
+              <div class="reveal" style="--order: 3"><p class="stage-days">1天</p><p class="stage-label">正式直播</p></div>
+              <div class="reveal" style="--order: 4"><p class="stage-days">3天</p><p class="stage-label">下一场准备</p></div>
+            </div>
+            <p class="relay-outcome reveal" style="--order: 5">交付完成后，团队没有把这次补位当作一次性硬扛。他们提前预警双十一的人手问题，继续推动人员安排、工作流程和跨团队协作优化。</p>
+            <p class="relay-line reveal" style="--order: 6">让下一次少一点硬扛，多一套方法。</p>
+          </div>
+        </div>
+      </div>
+      <footer class="values-line">以心为本&nbsp;&nbsp;&nbsp;极致引领&nbsp;&nbsp;&nbsp;爱与成就</footer>
+    </section>
+
+    <!-- 07 第二梯队与组织回响 -->
+    <section class="slide" id="slide-7" aria-label="Kiri 专访：第二梯队与组织回响">
+      <header class="masthead">
+        <span class="brand">aroseisarose</span>
+        <span class="section-label">PART 02&nbsp;&nbsp;人物回响</span>
+        <span class="page-number">07 / 08</span>
+      </header>
+      <div class="slide-content">
+        <h2 class="slide-title reveal" style="--order: 0">从一个人的经验，到团队自己运转</h2>
+        <blockquote class="echo-quote reveal" style="--order: 1">“我觉得两到三年内，最大的愿望就是玫瑰的第二梯队能够真正成长起来，玫瑰是玫瑰的增长曲线也能够自运转起来。<br><br>不是所有事情都要依赖某一个人。各个部门先把自己的事情高效运转起来，需要协同的时候再协同。”</blockquote>
+        <div class="echo-bottom">
+          <div class="echo-copy">
+            <p class="body-copy reveal" style="--order: 2">他期待的第二梯队，意味着经验有人承接，方法可以复制，各部门先高效运转，在真正需要的时候形成协同。个人能力由此进入团队，团队也有机会形成长期稳定的增长能力。</p>
+            <p class="echo-line reveal" style="--order: 3">“吐完槽之后，还是要回到最好的状态，享受工作带来的成就感。”</p>
+          </div>
+          <img class="rose-art reveal" style="--order: 4" src="./assets/watercolor-rose.webp" alt="玫瑰水彩插画">
+        </div>
+      </div>
+      <footer class="values-line">以心为本&nbsp;&nbsp;&nbsp;极致引领&nbsp;&nbsp;&nbsp;爱与成就</footer>
+    </section>
+
+    <!-- 08 文化一刻征集 -->
+    <section class="slide callout" id="slide-8" aria-label="文化一刻案例征集">
+      <header class="masthead">
+        <span class="brand">aroseisarose</span>
+        <span class="section-label">PART 03&nbsp;&nbsp;文化一刻征集</span>
+        <span class="page-number">08 / 08</span>
+      </header>
+      <div class="slide-content">
+        <div class="callout-grid">
+          <div class="callout-copy">
+            <h2 class="slide-title accent reveal" style="--order: 0">把你看见的文化一刻，<br>告诉我们</h2>
+            <p class="callout-question reveal" style="--order: 1">最近哪一次协作，<br>让你觉得被接住了？</p>
+            <p class="lead reveal" style="--order: 2">扫码填写案例，或发送至 HR 邮箱</p>
+            <p class="callout-email reveal" style="--order: 3">aroseisarosehr@aroseisarose.cn</p>
+            <p class="callout-tagline reveal" style="--order: 4">每一个被看见的日常，都在让文化发生。</p>
+          </div>
+          <div class="callout-visual">
+            <div class="qr-wrap reveal" style="--order: 2">
+              <img class="qr-image" src="./assets/culture-qr.png" alt="价值观案例征集二维码">
+            </div>
+            <div class="qr-wrap reveal" style="--order: 3">
+              <img class="mascot-image" src="./assets/rose-elephant.webp" alt="玫瑰小象形象">
+              <p class="scan-label">扫码，用1分钟写下</p>
+              <p class="rules">详细规则与奖励以表单内说明为准</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="values-line">以心为本&nbsp;&nbsp;&nbsp;极致引领&nbsp;&nbsp;&nbsp;爱与成就</footer>
+    </section>
+  </main>
+
+  <script>
+    /* ===========================================
+       幻灯片控制器：键盘、滚轮、触控、目录和页点
+       =========================================== */
+    class SlidePresentation {
+      constructor() {
+        this.slides = Array.from(document.querySelectorAll('.slide'));
+        this.currentSlide = 0;
+        this.wheelLocked = false;
+        this.touchStartY = 0;
+        this.touchStartX = 0;
+        this.progressBar = document.getElementById('progressBar');
+        this.navDots = document.getElementById('navDots');
+        this.pageStatus = document.getElementById('pageStatus');
+        this.reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        this.createNavDots();
+        this.setupObserver();
+        this.setupKeyboard();
+        this.setupWheel();
+        this.setupTouch();
+        this.setupJumpLinks();
+        this.setupFullscreen();
+        this.updateUI(0);
+      }
+
+      createNavDots() {
+        this.slides.forEach((slide, index) => {
+          const dot = document.createElement('button');
+          dot.type = 'button';
+          dot.className = 'nav-dot';
+          dot.setAttribute('aria-label', `前往第 ${index + 1} 页`);
+          dot.title = `第 ${index + 1} 页`;
+          dot.addEventListener('click', () => this.goTo(index));
+          this.navDots.appendChild(dot);
+        });
+      }
+
+      setupObserver() {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && entry.intersectionRatio >= 0.58) {
+              const index = this.slides.indexOf(entry.target);
+              this.currentSlide = index;
+              entry.target.classList.add('visible');
+              this.updateUI(index);
+              this.animateCounter(entry.target);
+            }
+          });
+        }, { threshold: [0.58] });
+
+        this.slides.forEach((slide) => observer.observe(slide));
+        this.slides[0].classList.add('visible');
+      }
+
+      setupKeyboard() {
+        document.addEventListener('keydown', (event) => {
+          if (['ArrowDown', 'ArrowRight', 'PageDown', ' '].includes(event.key)) {
+            event.preventDefault();
+            this.next();
+          } else if (['ArrowUp', 'ArrowLeft', 'PageUp'].includes(event.key)) {
+            event.preventDefault();
+            this.previous();
+          } else if (event.key === 'Home') {
+            event.preventDefault();
+            this.goTo(0);
+          } else if (event.key === 'End') {
+            event.preventDefault();
+            this.goTo(this.slides.length - 1);
+          }
+        });
+      }
+
+      setupWheel() {
+        window.addEventListener('wheel', (event) => {
+          if (Math.abs(event.deltaY) < Math.abs(event.deltaX) || Math.abs(event.deltaY) < 18) return;
+          event.preventDefault();
+          if (this.wheelLocked) return;
+          this.wheelLocked = true;
+          event.deltaY > 0 ? this.next() : this.previous();
+          window.setTimeout(() => { this.wheelLocked = false; }, this.reduceMotion ? 260 : 720);
+        }, { passive: false });
+      }
+
+      setupTouch() {
+        window.addEventListener('touchstart', (event) => {
+          const touch = event.changedTouches[0];
+          this.touchStartY = touch.clientY;
+          this.touchStartX = touch.clientX;
+        }, { passive: true });
+
+        window.addEventListener('touchend', (event) => {
+          const touch = event.changedTouches[0];
+          const deltaY = this.touchStartY - touch.clientY;
+          const deltaX = this.touchStartX - touch.clientX;
+          if (Math.abs(deltaY) > 44 && Math.abs(deltaY) > Math.abs(deltaX)) {
+            deltaY > 0 ? this.next() : this.previous();
+          }
+        }, { passive: true });
+      }
+
+      setupJumpLinks() {
+        document.querySelectorAll('[data-go]').forEach((button) => {
+          button.addEventListener('click', () => this.goTo(Number(button.dataset.go)));
+        });
+      }
+
+      setupFullscreen() {
+        const button = document.getElementById('fullscreenButton');
+        button.addEventListener('click', async () => {
+          try {
+            if (!document.fullscreenElement) {
+              await document.documentElement.requestFullscreen();
+            } else {
+              await document.exitFullscreen();
+            }
+          } catch (error) {
+            console.warn('当前浏览器未能进入全屏模式。', error);
+          }
+        });
+      }
+
+      animateCounter(slide) {
+        const counter = slide.querySelector('[data-count]');
+        if (!counter || counter.dataset.played === 'true') return;
+        counter.dataset.played = 'true';
+        if (this.reduceMotion) return;
+
+        const target = Number(counter.dataset.count);
+        const duration = 620;
+        const start = performance.now();
+        counter.textContent = '0';
+
+        const tick = (now) => {
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          counter.textContent = String(Math.round(target * eased));
+          if (progress < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      }
+
+      updateUI(index) {
+        const dots = Array.from(this.navDots.children);
+        dots.forEach((dot, dotIndex) => dot.setAttribute('aria-current', String(dotIndex === index)));
+        this.progressBar.style.width = `${((index + 1) / this.slides.length) * 100}%`;
+        this.pageStatus.textContent = `第 ${index + 1} 页，共 ${this.slides.length} 页`;
+      }
+
+      goTo(index) {
+        const clamped = Math.max(0, Math.min(index, this.slides.length - 1));
+        const distance = Math.abs(clamped - this.currentSlide);
+        const behavior = this.reduceMotion || distance > 1 ? 'auto' : 'smooth';
+        this.currentSlide = clamped;
+        this.slides[clamped].scrollIntoView({ behavior, block: 'start' });
+        this.updateUI(clamped);
+      }
+
+      next() {
+        this.goTo(this.currentSlide + 1);
+      }
+
+      previous() {
+        this.goTo(this.currentSlide - 1);
+      }
+    }
+
+    window.presentation = new SlidePresentation();
+  </script>
+</body>
+</html>
