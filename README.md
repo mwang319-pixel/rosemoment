@@ -6,6 +6,8 @@
 
 本期 Vol.06 链接：<https://mwang319-pixel.github.io/rosemoment/vol06/>
 
-后续期刊可按 `vol07/`、`vol08/` 建立同级目录。
+本期 Vol.07｜李涛访谈 链接：<https://mwang319-pixel.github.io/rosemoment/vol07/>
+
+后续期刊可按 `vol08/`、`vol09/` 建立同级目录。
 
 这是一个公开的临时展示仓库，请勿放入未授权公开的敏感内容。

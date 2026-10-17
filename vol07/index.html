@@ -1,0 +1,2130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#8e1837">
+  <meta name="robots" content="noindex,nofollow">
+  <title>玫瑰文化一刻｜李涛访谈</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&amp;family=Noto+Serif+SC:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    /* ===========================================
+       主题变量：修改这里即可整体换色或换字体
+       =========================================== */
+    :root {
+      --ink: #33272a;
+      --muted: #74676a;
+      --rose: #d93f6b;
+      --rose-dark: #8e1837;
+      --blush: #f4dde3;
+      --pale: #fbf4f5;
+      --warm: #f7efef;
+      --paper: #fffdfd;
+      --white: #ffffff;
+      --dark: #40292e;
+      --line: #d8c9cd;
+      --dark-line: #7b646a;
+      --pink-light: #f28aa7;
+
+      --font-display: "Noto Serif SC", "Songti SC", serif;
+      --font-body: "Noto Sans SC", "PingFang SC", sans-serif;
+
+      --title-size: clamp(1.8rem, min(4.1vw, 7vh), 4rem);
+      --h2-size: clamp(1.45rem, min(3.15vw, 5.3vh), 3.1rem);
+      --h3-size: clamp(1rem, min(1.8vw, 3.2vh), 1.75rem);
+      --body-size: clamp(0.65rem, min(1.35vw, 2.25vh), 1.1rem);
+      --small-size: clamp(0.58rem, min(0.86vw, 1.55vh), 0.78rem);
+      --slide-padding: clamp(1rem, 4vw, 4rem);
+      --content-gap: clamp(0.5rem, 2vw, 2rem);
+      --element-gap: clamp(0.25rem, 1vw, 1rem);
+      --page-x: clamp(1.6rem, 5.6vw, 5.5rem);
+      --page-top: clamp(4.4rem, 13vh, 7rem);
+      --page-bottom: clamp(2.6rem, 7.4vh, 4.8rem);
+
+      --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
+      --duration: 720ms;
+    }
+
+    /* ===========================================
+       VIEWPORT FITTING: MANDATORY BASE STYLES
+       Include this ENTIRE file in every presentation.
+       These styles ensure slides fit exactly in the viewport.
+       =========================================== */
+
+    /* 1. Lock html/body to viewport */
+    html, body {
+        height: 100%;
+        overflow-x: hidden;
+    }
+
+    html {
+        scroll-snap-type: y mandatory;
+        scroll-behavior: smooth;
+    }
+
+    /* 2. Each slide = exact viewport height */
+    .slide {
+        width: 100vw;
+        height: 100vh;
+        height: 100dvh; /* Dynamic viewport height for mobile browsers */
+        overflow: hidden; /* CRITICAL: Prevent ANY overflow */
+        scroll-snap-align: start;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    /* 3. Content container with flex for centering */
+    .slide-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-height: 100%;
+        overflow: hidden; /* Double-protection against overflow */
+        padding: var(--slide-padding);
+    }
+
+    /* 4. ALL typography uses clamp() for responsive scaling */
+    :root {
+        /* Titles scale from mobile to desktop */
+        --title-size: clamp(1.5rem, 5vw, 4rem);
+        --h2-size: clamp(1.25rem, 3.5vw, 2.5rem);
+        --h3-size: clamp(1rem, 2.5vw, 1.75rem);
+
+        /* Body text */
+        --body-size: clamp(0.75rem, 1.5vw, 1.125rem);
+        --small-size: clamp(0.65rem, 1vw, 0.875rem);
+
+        /* Spacing scales with viewport */
+        --slide-padding: clamp(1rem, 4vw, 4rem);
+        --content-gap: clamp(0.5rem, 2vw, 2rem);
+        --element-gap: clamp(0.25rem, 1vw, 1rem);
+    }
+
+    /* 5. Cards/containers use viewport-relative max sizes */
+    .card, .container, .content-box {
+        max-width: min(90vw, 1000px);
+        max-height: min(80vh, 700px);
+    }
+
+    /* 6. Lists auto-scale with viewport */
+    .feature-list, .bullet-list {
+        gap: clamp(0.4rem, 1vh, 1rem);
+    }
+
+    .feature-list li, .bullet-list li {
+        font-size: var(--body-size);
+        line-height: 1.4;
+    }
+
+    /* 7. Grids adapt to available space */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+        gap: clamp(0.5rem, 1.5vw, 1rem);
+    }
+
+    /* 8. Images constrained to viewport */
+    img, .image-container {
+        max-width: 100%;
+        max-height: min(50vh, 400px);
+        object-fit: contain;
+    }
+
+    /* ===========================================
+       RESPONSIVE BREAKPOINTS
+       Aggressive scaling for smaller viewports
+       =========================================== */
+
+    /* Short viewports (< 700px height) */
+    @media (max-height: 700px) {
+        :root {
+            --slide-padding: clamp(0.75rem, 3vw, 2rem);
+            --content-gap: clamp(0.4rem, 1.5vw, 1rem);
+            --title-size: clamp(1.25rem, 4.5vw, 2.5rem);
+            --h2-size: clamp(1rem, 3vw, 1.75rem);
+        }
+    }
+
+    /* Very short viewports (< 600px height) */
+    @media (max-height: 600px) {
+        :root {
+            --slide-padding: clamp(0.5rem, 2.5vw, 1.5rem);
+            --content-gap: clamp(0.3rem, 1vw, 0.75rem);
+            --title-size: clamp(1.1rem, 4vw, 2rem);
+            --body-size: clamp(0.7rem, 1.2vw, 0.95rem);
+        }
+
+        /* Hide non-essential elements */
+        .nav-dots, .keyboard-hint, .decorative {
+            display: none;
+        }
+    }
+
+    /* Extremely short (landscape phones, < 500px height) */
+    @media (max-height: 500px) {
+        :root {
+            --slide-padding: clamp(0.4rem, 2vw, 1rem);
+            --title-size: clamp(1rem, 3.5vw, 1.5rem);
+            --h2-size: clamp(0.9rem, 2.5vw, 1.25rem);
+            --body-size: clamp(0.65rem, 1vw, 0.85rem);
+        }
+    }
+
+    /* Narrow viewports (< 600px width) */
+    @media (max-width: 600px) {
+        :root {
+            --title-size: clamp(1.25rem, 7vw, 2.5rem);
+        }
+
+        /* Stack grids vertically */
+        .grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* ===========================================
+       REDUCED MOTION
+       Respect user preferences
+       =========================================== */
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation-duration: 0.01ms !important;
+            transition-duration: 0.2s !important;
+        }
+
+        html {
+            scroll-behavior: auto;
+        }
+    }
+
+    /* ===========================================
+       基础样式与全局排版
+       =========================================== */
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scrollbar-width: none;
+      background: var(--ink);
+    }
+
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+      display: none;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: var(--font-body);
+      font-size: var(--body-size);
+      line-height: 1.55;
+      letter-spacing: 0;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    button,
+    a {
+      color: inherit;
+      font: inherit;
+    }
+
+    button {
+      border: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    blockquote {
+      margin: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    blockquote {
+      font-family: var(--font-display);
+      letter-spacing: 0;
+    }
+
+    .slide {
+      isolation: isolate;
+      background: var(--paper);
+    }
+
+    .slide-content {
+      justify-content: flex-start;
+      padding: var(--page-top) var(--page-x) var(--page-bottom);
+    }
+
+    .masthead {
+      position: absolute;
+      z-index: 5;
+      top: clamp(0.8rem, 3.2vh, 1.8rem);
+      right: var(--page-x);
+      left: var(--page-x);
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding-bottom: clamp(0.45rem, 1.5vh, 0.9rem);
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: var(--small-size);
+      line-height: 1;
+    }
+
+    .brand {
+      justify-self: start;
+      color: var(--ink);
+      font-family: var(--font-display);
+      font-size: clamp(0.76rem, min(1.35vw, 2.2vh), 1.2rem);
+      font-weight: 600;
+    }
+
+    .section-label {
+      justify-self: center;
+      text-transform: uppercase;
+    }
+
+    .page-number {
+      justify-self: end;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .values-line {
+      position: absolute;
+      z-index: 5;
+      right: var(--page-x);
+      bottom: clamp(0.55rem, 2vh, 1rem);
+      left: var(--page-x);
+      text-align: center;
+      color: var(--muted);
+      font-size: clamp(0.54rem, min(0.74vw, 1.3vh), 0.7rem);
+    }
+
+    .dark .masthead {
+      border-color: var(--dark-line);
+      color: #d8c5ca;
+    }
+
+    .dark .brand,
+    .dark .values-line {
+      color: var(--white);
+    }
+
+    .eyebrow {
+      color: var(--rose);
+      font-size: clamp(0.65rem, min(1.12vw, 1.9vh), 0.95rem);
+      font-weight: 700;
+    }
+
+    .display-title {
+      max-width: min(66vw, 900px);
+      font-size: var(--title-size);
+      font-weight: 600;
+      line-height: 1.18;
+    }
+
+    .slide-title {
+      font-size: var(--h2-size);
+      font-weight: 600;
+      line-height: 1.25;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: clamp(0.72rem, min(1.5vw, 2.45vh), 1.2rem);
+      line-height: 1.55;
+    }
+
+    .body-copy {
+      font-size: var(--body-size);
+      line-height: 1.7;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .accent {
+      color: var(--rose-dark);
+    }
+
+    /* ===========================================
+       动效：进入视口后才分层出现
+       =========================================== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(clamp(0.8rem, 2.2vh, 1.5rem));
+      transition:
+        opacity var(--duration) var(--ease-editorial),
+        transform var(--duration) var(--ease-editorial);
+      transition-delay: calc(var(--order, 0) * 90ms + 80ms);
+    }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(calc(-1 * clamp(1rem, 3vw, 2.8rem)));
+      transition:
+        opacity var(--duration) var(--ease-editorial),
+        transform var(--duration) var(--ease-editorial);
+      transition-delay: calc(var(--order, 0) * 90ms + 80ms);
+    }
+
+    .slide.visible .reveal,
+    .slide.visible .reveal-left {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+
+    /* ===========================================
+       固定演示控制：进度、页点、全屏
+       =========================================== */
+    .progress-track {
+      position: fixed;
+      z-index: 90;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: clamp(0.12rem, 0.24vh, 0.18rem);
+      background: rgb(255 255 255 / 18%);
+    }
+
+    .progress-bar {
+      width: 12.5%;
+      height: 100%;
+      background: var(--rose);
+      transform-origin: left;
+      transition: width 360ms var(--ease-editorial);
+    }
+
+    .nav-dots {
+      position: fixed;
+      z-index: 90;
+      top: 50%;
+      right: clamp(0.55rem, 1.4vw, 1.25rem);
+      display: flex;
+      flex-direction: column;
+      gap: clamp(0.38rem, 1vh, 0.62rem);
+      transform: translateY(-50%);
+    }
+
+    .nav-dot {
+      width: clamp(0.42rem, 0.72vw, 0.6rem);
+      height: clamp(0.42rem, 0.72vw, 0.6rem);
+      padding: 0;
+      border: 1px solid rgb(142 24 55 / 55%);
+      border-radius: 50%;
+      background: rgb(255 255 255 / 70%);
+      cursor: pointer;
+      transition:
+        transform 240ms ease,
+        background 240ms ease,
+        border-color 240ms ease;
+    }
+
+    .nav-dot[aria-current="true"] {
+      border-color: var(--rose-dark);
+      background: var(--rose-dark);
+      transform: scale(1.35);
+    }
+
+    .fullscreen-button {
+      position: fixed;
+      z-index: 90;
+      left: clamp(0.55rem, 1.4vw, 1.25rem);
+      bottom: clamp(0.55rem, 1.4vw, 1.25rem);
+      display: grid;
+      width: clamp(2rem, 3.2vw, 2.7rem);
+      height: clamp(2rem, 3.2vw, 2.7rem);
+      place-items: center;
+      border: 1px solid rgb(142 24 55 / 32%);
+      border-radius: 50%;
+      color: var(--rose-dark);
+      background: rgb(255 255 255 / 78%);
+      box-shadow: 0 clamp(0.2rem, 0.6vh, 0.45rem) clamp(0.9rem, 2vw, 1.4rem) rgb(64 41 46 / 12%);
+      cursor: pointer;
+      font-size: clamp(0.9rem, 1.6vw, 1.2rem);
+      line-height: 1;
+      backdrop-filter: blur(clamp(0.25rem, 0.7vw, 0.5rem));
+      transition: transform 220ms ease, background 220ms ease;
+    }
+
+    .fullscreen-button:hover,
+    .fullscreen-button:focus-visible {
+      background: var(--white);
+      transform: scale(1.08);
+      outline: 2px solid var(--rose);
+      outline-offset: clamp(0.1rem, 0.3vw, 0.2rem);
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* ===========================================
+       01 封面
+       =========================================== */
+    .cover {
+      background: var(--warm);
+    }
+
+    .cover::before {
+      position: absolute;
+      z-index: 4;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: clamp(0.5rem, 1.25vw, 1rem);
+      background: var(--rose-dark);
+      content: "";
+    }
+
+    .cover-copy {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      width: 60%;
+      height: 100%;
+      flex-direction: column;
+      justify-content: center;
+      padding: clamp(1.4rem, 5vw, 5rem) clamp(1.8rem, 5.6vw, 5.5rem);
+      gap: clamp(0.35rem, 1.45vh, 0.9rem);
+    }
+
+    .cover-brand {
+      margin-bottom: clamp(0.3rem, 1.8vh, 1rem);
+      font-family: var(--font-display);
+      font-size: clamp(1rem, min(2.2vw, 3.6vh), 1.8rem);
+      font-weight: 600;
+    }
+
+    .cover-volume {
+      color: var(--muted);
+      font-size: var(--small-size);
+    }
+
+    .cover-title {
+      margin-top: clamp(0.5rem, 4vh, 2.5rem);
+      font-size: clamp(1.75rem, min(4.45vw, 7.45vh), 4.45rem);
+      font-weight: 600;
+      line-height: 1.34;
+    }
+
+    .cover-subtitle {
+      color: var(--rose-dark);
+      font-size: clamp(0.8rem, min(1.6vw, 2.7vh), 1.35rem);
+      font-weight: 700;
+    }
+
+    .cover-rule {
+      width: clamp(2.2rem, 4vw, 3.8rem);
+      height: clamp(0.12rem, 0.42vh, 0.24rem);
+      margin-block: clamp(0.2rem, 1.3vh, 0.7rem);
+      background: var(--rose);
+    }
+
+    .cover-quote {
+      max-width: min(48vw, 700px);
+      color: var(--muted);
+      font-family: var(--font-display);
+      font-size: clamp(0.7rem, min(1.55vw, 2.55vh), 1.3rem);
+      font-style: italic;
+      line-height: 1.7;
+    }
+
+    .cover-date {
+      margin-top: clamp(0.2rem, 1.8vh, 1rem);
+      color: var(--muted);
+      font-size: var(--small-size);
+    }
+
+    .cover-photo {
+      position: absolute;
+      inset: 0 0 0 60%;
+      background: var(--warm);
+      transform: scale(1.04);
+      transition: transform 1.35s var(--ease-editorial);
+    }
+
+    .cover-photo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-height: none;
+      object-fit: cover;
+      object-position: center 25%;
+    }
+
+    .cover.visible .cover-photo {
+      transform: scale(1);
+    }
+
+    /* ===========================================
+       02 目录：三块均为可点击入口
+       =========================================== */
+    .contents-intro {
+      display: flex;
+      flex-direction: column;
+      gap: clamp(0.35rem, 1vh, 0.7rem);
+    }
+
+    .toc-grid {
+      display: grid;
+      flex: 1;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: clamp(1.1rem, 5vh, 3.6rem);
+    }
+
+    .toc-item {
+      position: relative;
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: clamp(0.6rem, 2vw, 1.6rem) clamp(0.7rem, 3.2vw, 2.8rem);
+      border-left: 1px solid var(--line);
+      background: transparent;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .toc-item:first-child {
+      padding-left: 0;
+      border-left: 0;
+    }
+
+    .toc-item::after {
+      position: absolute;
+      right: clamp(0.7rem, 3.2vw, 2.8rem);
+      bottom: clamp(0.7rem, 2vh, 1.2rem);
+      left: clamp(0.7rem, 3.2vw, 2.8rem);
+      height: clamp(0.1rem, 0.25vh, 0.16rem);
+      background: var(--rose);
+      content: "";
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 360ms var(--ease-editorial);
+    }
+
+    .toc-item:first-child::after {
+      left: 0;
+    }
+
+    .toc-item:hover::after,
+    .toc-item:focus-visible::after {
+      transform: scaleX(1);
+    }
+
+    .toc-item:focus-visible {
+      outline: 2px solid var(--rose);
+      outline-offset: clamp(0.1rem, 0.3vw, 0.2rem);
+    }
+
+    .toc-num {
+      color: var(--blush);
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, min(5vw, 8vh), 4.8rem);
+      font-weight: 600;
+      line-height: 1;
+      transition: color 260ms ease;
+    }
+
+    .toc-item:hover .toc-num,
+    .toc-item:focus-visible .toc-num {
+      color: var(--rose);
+    }
+
+    .toc-title {
+      margin-top: clamp(0.6rem, 2.5vh, 1.5rem);
+      color: var(--rose-dark);
+      font-family: var(--font-display);
+      font-size: clamp(0.92rem, min(1.9vw, 3.2vh), 1.65rem);
+      font-weight: 600;
+    }
+
+    .toc-desc {
+      margin-top: clamp(0.55rem, 2.1vh, 1.2rem);
+      font-size: clamp(0.64rem, min(1.25vw, 2.1vh), 1rem);
+      line-height: 1.75;
+    }
+
+    .toc-page {
+      margin-top: auto;
+      color: var(--muted);
+      font-size: var(--small-size);
+    }
+
+    /* ===========================================
+       03 文化解码
+       =========================================== */
+    .decode-intro {
+      display: flex;
+      flex-direction: column;
+      gap: clamp(0.35rem, 1.1vh, 0.75rem);
+    }
+
+    .decode-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: clamp(1rem, 5.4vw, 5.5rem);
+      margin-top: clamp(1rem, 5vh, 3.6rem);
+    }
+
+    .decode-block {
+      position: relative;
+      padding-left: clamp(1rem, 3vw, 2.4rem);
+    }
+
+    .decode-block::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: clamp(0.18rem, 0.42vw, 0.34rem);
+      background: var(--rose);
+      content: "";
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform 620ms var(--ease-editorial) 260ms;
+    }
+
+    .visible .decode-block::before {
+      transform: scaleY(1);
+    }
+
+    .decode-block h3 {
+      margin-bottom: clamp(0.55rem, 2vh, 1.2rem);
+      font-size: var(--h3-size);
+    }
+
+    .reflection {
+      margin-top: auto;
+      padding: clamp(0.75rem, 2vh, 1.2rem) clamp(1rem, 3vw, 2.4rem);
+      color: var(--rose-dark);
+      background: var(--pale);
+      font-family: var(--font-display);
+      font-size: clamp(0.8rem, min(1.45vw, 2.45vh), 1.15rem);
+      font-weight: 600;
+      text-align: center;
+    }
+
+    /* ===========================================
+       04 人物开篇
+       =========================================== */
+    .profile {
+      background: var(--pale);
+    }
+
+    .profile-grid {
+      display: grid;
+      height: 100%;
+      grid-template-columns: 36% 1fr;
+      gap: clamp(1.5rem, 5vw, 4.8rem);
+    }
+
+    .profile-photo {
+      min-height: 0;
+      background: var(--pale);
+      transform: scale(1.03);
+      transition: transform 1.1s var(--ease-editorial);
+    }
+
+    .profile.visible .profile-photo {
+      transform: scale(1);
+    }
+
+    .profile-copy {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      justify-content: center;
+      gap: clamp(0.65rem, 2.4vh, 1.5rem);
+    }
+
+    .profile-quote {
+      padding: clamp(0.8rem, 2.6vh, 1.5rem) clamp(1rem, 3vw, 2.1rem);
+      color: var(--rose-dark);
+      background: var(--blush);
+      font-family: var(--font-display);
+      font-size: clamp(0.75rem, min(1.55vw, 2.55vh), 1.25rem);
+      font-weight: 600;
+      font-style: italic;
+      line-height: 1.62;
+    }
+
+    /* ===========================================
+       05 战役复盘
+       =========================================== */
+    .review-grid {
+      display: grid;
+      flex: 1;
+      grid-template-columns: 46% 1fr;
+      gap: clamp(1.5rem, 5vw, 4.5rem);
+      margin-top: clamp(0.8rem, 3.5vh, 2.2rem);
+    }
+
+    .review-copy {
+      display: flex;
+      flex-direction: column;
+      gap: clamp(0.75rem, 3vh, 1.7rem);
+    }
+
+    .review-copy h3 {
+      color: var(--rose-dark);
+      font-size: var(--h3-size);
+    }
+
+    .review-quote {
+      align-self: center;
+      padding: clamp(1.1rem, 4vh, 2.8rem) clamp(1.2rem, 3.6vw, 3.2rem);
+      color: var(--rose-dark);
+      background: var(--blush);
+      font-size: clamp(0.75rem, min(1.45vw, 2.45vh), 1.25rem);
+      font-weight: 600;
+      line-height: 1.65;
+    }
+
+    .review-footnote {
+      padding: clamp(0.45rem, 1.4vh, 0.8rem) clamp(0.8rem, 2vw, 1.6rem);
+      background: var(--pale);
+      font-size: clamp(0.62rem, min(1.1vw, 1.85vh), 0.92rem);
+      text-align: center;
+    }
+
+    /* ===========================================
+       06 九天接力
+       =========================================== */
+    .relay {
+      color: var(--white);
+      background: var(--dark);
+    }
+
+    .relay-layout {
+      display: grid;
+      flex: 1;
+      grid-template-columns: 34% 1fr;
+      gap: clamp(1.2rem, 5vw, 4.6rem);
+      margin-top: clamp(0.7rem, 3vh, 2rem);
+    }
+
+    .relay-total {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      justify-content: center;
+      padding-right: clamp(1rem, 3vw, 2.6rem);
+      border-right: 1px solid var(--dark-line);
+    }
+
+    .relay-number {
+      color: var(--pink-light);
+      font-family: var(--font-display);
+      font-size: clamp(3.2rem, min(7vw, 12vh), 7rem);
+      font-weight: 600;
+      line-height: 0.95;
+    }
+
+    .relay-unit {
+      font-size: clamp(1.2rem, min(2.4vw, 4vh), 2.2rem);
+    }
+
+    .relay-kicker {
+      margin-top: clamp(0.45rem, 1.5vh, 0.8rem);
+      font-size: clamp(0.8rem, min(1.5vw, 2.55vh), 1.2rem);
+      font-weight: 700;
+    }
+
+    .relay-text {
+      margin-top: clamp(0.9rem, 4.5vh, 2.8rem);
+      font-size: clamp(0.64rem, min(1.2vw, 2vh), 1rem);
+      line-height: 1.8;
+    }
+
+    .relay-story {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .relay-stages {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(0.7rem, 3vw, 2.6rem);
+      padding-bottom: clamp(0.9rem, 3vh, 1.8rem);
+      border-bottom: 1px solid var(--dark-line);
+    }
+
+    .stage-days {
+      color: var(--pink-light);
+      font-family: var(--font-display);
+      font-size: clamp(1.35rem, min(3vw, 5vh), 2.8rem);
+      line-height: 1.1;
+    }
+
+    .stage-label {
+      margin-top: clamp(0.2rem, 0.8vh, 0.45rem);
+      color: #d8c5ca;
+      font-size: clamp(0.62rem, min(1.05vw, 1.75vh), 0.9rem);
+    }
+
+    .relay-outcome {
+      margin-top: clamp(1rem, 4vh, 2.5rem);
+      font-size: clamp(0.68rem, min(1.3vw, 2.15vh), 1.05rem);
+      line-height: 1.8;
+    }
+
+    .relay-line {
+      position: relative;
+      margin-top: auto;
+      padding: clamp(0.55rem, 1.8vh, 1rem) 0 clamp(0.55rem, 1.8vh, 1rem) clamp(1rem, 2.5vw, 2rem);
+      color: var(--blush);
+      font-family: var(--font-display);
+      font-size: clamp(0.78rem, min(1.55vw, 2.55vh), 1.3rem);
+      font-weight: 600;
+    }
+
+    .relay-line::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: clamp(0.18rem, 0.45vw, 0.34rem);
+      background: var(--rose);
+      content: "";
+    }
+
+    /* ===========================================
+       07 人物回响
+       =========================================== */
+    .echo-quote {
+      margin-top: clamp(1rem, 4vh, 2.8rem);
+      padding: clamp(1rem, 3.6vh, 2.4rem) clamp(1.2rem, 4vw, 3.6rem);
+      color: var(--rose-dark);
+      background: var(--blush);
+      font-size: clamp(0.75rem, min(1.65vw, 2.8vh), 1.38rem);
+      font-weight: 600;
+      font-style: italic;
+      line-height: 1.68;
+    }
+
+    .echo-bottom {
+      display: grid;
+      flex: 1;
+      grid-template-columns: 1fr 18%;
+      align-items: center;
+      gap: clamp(1.2rem, 4vw, 3.6rem);
+      min-height: 0;
+    }
+
+    .echo-copy {
+      display: flex;
+      flex-direction: column;
+      gap: clamp(0.7rem, 2.5vh, 1.5rem);
+    }
+
+    .echo-line {
+      position: relative;
+      padding-left: clamp(0.9rem, 2.3vw, 1.8rem);
+      font-family: var(--font-display);
+      font-size: clamp(0.7rem, min(1.25vw, 2.1vh), 1.05rem);
+      font-weight: 600;
+    }
+
+    .echo-line::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: clamp(0.16rem, 0.38vw, 0.3rem);
+      background: var(--rose);
+      content: "";
+    }
+
+    .rose-art {
+      width: 100%;
+      max-height: min(36vh, 320px);
+      object-fit: contain;
+      filter: saturate(0.92);
+      transform: rotate(-3deg) scale(0.88);
+      transition: transform 900ms var(--ease-editorial) 360ms;
+    }
+
+    .visible .rose-art {
+      transform: rotate(0) scale(1);
+    }
+
+    /* ===========================================
+       08 文化征集
+       =========================================== */
+    .callout {
+      background: var(--blush);
+    }
+
+    .callout-grid {
+      display: grid;
+      height: 100%;
+      grid-template-columns: 1fr 44%;
+      gap: clamp(1.2rem, 4vw, 3.8rem);
+    }
+
+    .callout-copy {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      justify-content: center;
+      gap: clamp(0.65rem, 2.5vh, 1.5rem);
+    }
+
+    .callout-question {
+      margin-top: clamp(0.8rem, 4vh, 2.5rem);
+      font-family: var(--font-display);
+      font-size: clamp(0.92rem, min(2.1vw, 3.55vh), 1.85rem);
+      font-weight: 600;
+      line-height: 1.6;
+    }
+
+    .callout-email {
+      color: var(--rose-dark);
+      font-size: clamp(0.62rem, min(1.2vw, 2vh), 1rem);
+      font-weight: 700;
+      overflow-wrap: anywhere;
+    }
+
+    /* Vol.07 专用：人物照片待补，数据页使用事实截图。 */
+    .placeholder-photo {
+      display: grid;
+      min-width: 0;
+      min-height: 0;
+      place-items: center;
+      border: 1px dashed var(--rose);
+      background: linear-gradient(145deg, var(--pale), var(--blush));
+      color: var(--rose-dark);
+      text-align: center;
+    }
+
+    .placeholder-photo::before {
+      position: absolute;
+      inset: clamp(0.55rem, 1.5vw, 1.1rem);
+      border: 1px solid rgb(142 24 55 / 22%);
+      content: "";
+      pointer-events: none;
+    }
+
+    .placeholder-photo span {
+      position: relative;
+      z-index: 1;
+      font-family: var(--font-display);
+      font-size: clamp(0.9rem, min(1.7vw, 2.8vh), 1.3rem);
+      line-height: 1.7;
+    }
+
+    .cover-photo.placeholder-photo {
+      inset: 0 0 0 60%;
+      width: auto;
+      height: auto;
+      background: linear-gradient(145deg, var(--pale), var(--blush));
+      transform: none;
+    }
+
+    .profile-photo.placeholder-photo {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(145deg, var(--pale), var(--blush));
+      transform: none;
+    }
+
+    .fact-grid {
+      display: grid;
+      flex: 1;
+      grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr);
+      gap: clamp(1.2rem, 4.5vw, 4.5rem);
+      margin-top: clamp(.8rem, 3vh, 2rem);
+      min-height: 0;
+    }
+
+    .fact-copy,
+    .fact-evidence {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      justify-content: center;
+      gap: clamp(.65rem, 2.2vh, 1.35rem);
+    }
+
+    .fact-copy .body-copy strong,
+    .delivery-copy .body-copy strong {
+      color: var(--rose-dark);
+    }
+
+    .fact-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: clamp(.55rem, 1.4vw, 1rem);
+    }
+
+    .fact-stat {
+      padding: clamp(.55rem, 1.5vh, 1rem) clamp(.65rem, 1.4vw, 1.1rem);
+      border-top: clamp(.12rem, .25vh, .18rem) solid var(--rose);
+      background: var(--pale);
+    }
+
+    .fact-stat strong {
+      display: block;
+      color: var(--rose-dark);
+      font-family: var(--font-display);
+      font-size: clamp(1.25rem, min(2.3vw, 4vh), 2.2rem);
+      line-height: 1.1;
+    }
+
+    .fact-stat span {
+      display: block;
+      margin-top: .25rem;
+      color: var(--muted);
+      font-size: var(--small-size);
+      line-height: 1.45;
+    }
+
+    .evidence-figure {
+      margin: 0;
+      padding: clamp(.45rem, 1vw, .7rem);
+      border: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    .evidence-figure img {
+      display: block;
+      width: 100%;
+      max-height: min(31vh, 250px);
+      object-fit: contain;
+    }
+
+    .evidence-figure figcaption {
+      margin-top: .45rem;
+      color: var(--muted);
+      font-size: var(--small-size);
+      line-height: 1.45;
+    }
+
+    .timeline-figure {
+      padding: 0;
+      border: 0;
+      background: transparent;
+    }
+
+    #slide-6 .quote-stack {
+      gap: clamp(.45rem, 1.2vh, .8rem);
+    }
+
+    #slide-6 .echo-quote {
+      margin-top: clamp(.55rem, 1.5vh, 1rem);
+      padding: clamp(.7rem, 2vh, 1.2rem) clamp(1rem, 2.6vw, 2.2rem);
+      font-size: clamp(.68rem, min(1.25vw, 2.1vh), 1rem);
+      line-height: 1.5;
+    }
+
+    .delivery-copy {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      justify-content: center;
+      gap: clamp(.7rem, 2.3vh, 1.4rem);
+    }
+
+    .delivery-evidence {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      justify-content: center;
+      gap: clamp(.7rem, 2vh, 1.2rem);
+    }
+
+    .delivery-evidence .fact-stats strong {
+      font-size: clamp(1.05rem, min(1.85vw, 3.2vh), 1.75rem);
+    }
+
+    .quote-stack {
+      display: grid;
+      gap: clamp(.65rem, 2vh, 1.2rem);
+    }
+
+    .quote-stack .echo-line {
+      font-size: clamp(.75rem, min(1.45vw, 2.4vh), 1.2rem);
+      line-height: 1.65;
+    }
+
+    .quote-side {
+      display: grid;
+      min-width: 0;
+      grid-template-rows: auto auto;
+      align-items: center;
+      align-content: center;
+      gap: clamp(.25rem, .8vh, .55rem);
+    }
+
+    .quote-side .placeholder-photo {
+      width: 100%;
+      min-height: 0;
+    }
+
+    .interview-layout {
+      display: grid;
+      flex: 1;
+      grid-template-columns: minmax(0, 1fr) minmax(220px, 31%);
+      align-items: center;
+      gap: clamp(1.2rem, 4vw, 3.6rem);
+      min-height: 0;
+    }
+
+    .interview-photo {
+      width: 100%;
+      height: min(56vh, 420px);
+    }
+
+    .interview-photo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 25%;
+    }
+
+    .slogan {
+      color: var(--rose-dark);
+      font-family: var(--font-display);
+      font-size: clamp(.88rem, min(1.7vw, 2.7vh), 1.35rem);
+      font-weight: 600;
+    }
+
+    .values-center {
+      width: min(82%, 900px);
+      margin: clamp(1rem, 3vh, 2rem) auto 0;
+      padding: clamp(.9rem, 2.4vh, 1.6rem) clamp(1.2rem, 4vw, 3.6rem);
+      border-top: clamp(.18rem, .42vw, .32rem) solid var(--rose);
+      background: var(--blush);
+      text-align: center;
+    }
+
+    .values-center h2 {
+      color: var(--rose-dark);
+      font-family: var(--font-display);
+      font-size: clamp(1.55rem, min(3.4vw, 5.2vh), 3rem);
+      line-height: 1.2;
+    }
+
+    .values-center .formal-lead {
+      margin-top: .35rem;
+      color: var(--rose-dark);
+      font-family: var(--font-display);
+      font-size: clamp(.95rem, min(1.65vw, 2.6vh), 1.35rem);
+      font-weight: 600;
+    }
+
+    .values-center .formal-copy {
+      margin-top: .45rem;
+      color: var(--ink);
+      font-size: clamp(.72rem, min(1.2vw, 1.9vh), 1rem);
+      line-height: 1.65;
+    }
+
+    #slide-3 .decode-grid {
+      margin-top: clamp(1rem, 3vh, 2rem);
+    }
+
+    #slide-3 .reflection {
+      margin-top: clamp(.7rem, 1.8vh, 1.1rem);
+    }
+
+    @media (max-width: 680px) and (orientation: portrait) {
+      #slide-4 .fact-grid {
+        gap: .45rem;
+      }
+
+      #slide-4 .fact-copy,
+      #slide-4 .fact-evidence {
+        gap: .45rem;
+      }
+
+      #slide-4 .profile-quote {
+        padding: .55rem .8rem;
+        font-size: .72rem;
+        line-height: 1.4;
+      }
+
+      #slide-4 .body-copy {
+        font-size: .68rem;
+        line-height: 1.38;
+      }
+
+      #slide-4 .timeline-figure img {
+        max-height: 16vh;
+      }
+
+      #slide-6 .quote-stack {
+        gap: .35rem;
+      }
+
+      #slide-6 .echo-quote {
+        margin-top: .45rem;
+        padding: .5rem .75rem;
+        font-size: .68rem;
+        line-height: 1.35;
+      }
+
+      .fact-grid {
+        grid-template-columns: 1fr;
+        gap: clamp(.8rem, 2.5vh, 1.4rem);
+      }
+
+      .values-center {
+        width: 100%;
+        margin-top: .7rem;
+        padding: .7rem .8rem;
+      }
+
+      #slide-3 .decode-grid {
+        gap: .65rem;
+        margin-top: .8rem;
+      }
+
+      .fact-evidence {
+        gap: .65rem;
+      }
+
+      .evidence-figure img {
+        max-height: 26vh;
+      }
+
+      .quote-side {
+        grid-template-rows: minmax(10rem, 15rem) auto;
+      }
+
+      .interview-layout {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .interview-photo {
+        height: 7rem;
+      }
+
+      .interview-layout {
+        gap: .35rem;
+      }
+
+      #slide-6 .quote-stack {
+        gap: .45rem;
+      }
+
+      #slide-6 .quote-stack .echo-quote {
+        margin-top: .45rem;
+        padding: .5rem .75rem;
+        font-size: .68rem;
+        line-height: 1.35;
+      }
+
+      #slide-6 .quote-stack .body-copy,
+      #slide-6 .quote-side .body-copy {
+        font-size: .66rem;
+        line-height: 1.35;
+      }
+
+      #slide-6 .quote-side {
+        grid-template-rows: 7rem auto;
+        gap: .25rem;
+      }
+
+      .cover-photo.placeholder-photo {
+        inset: 0;
+        opacity: .72;
+        place-items: start center;
+        padding-top: 14vh;
+      }
+    }
+
+    .callout-tagline {
+      margin-top: auto;
+      color: var(--rose-dark);
+      font-family: var(--font-display);
+      font-size: clamp(0.72rem, min(1.4vw, 2.3vh), 1.15rem);
+      font-weight: 600;
+    }
+
+    .callout-visual {
+      position: relative;
+      display: grid;
+      min-width: 0;
+      grid-template-columns: 58% 42%;
+      align-items: center;
+      gap: clamp(0.2rem, 1vw, 0.8rem);
+    }
+
+    /* 07 页：把征集入口与奖励信息组织成一张可编辑的信息页。 */
+    #slide-7 .slide-content {
+      padding-top: clamp(3.8rem, 10vh, 5.8rem);
+    }
+
+    #slide-7 .callout-grid {
+      grid-template-columns: minmax(0, 42%) minmax(0, 58%);
+      grid-template-rows: auto minmax(0, 1fr) auto;
+      align-content: stretch;
+      column-gap: clamp(1rem, 3vw, 2.8rem);
+      row-gap: clamp(1rem, 2.5vh, 2rem);
+    }
+
+    #slide-7 .callout-copy {
+      grid-column: 1;
+      grid-row: 1;
+      justify-content: flex-start;
+      gap: clamp(.55rem, 1.6vh, 1rem);
+    }
+
+    #slide-7 .callout-question {
+      margin-top: clamp(.35rem, 1.4vh, .8rem);
+      font-size: clamp(.82rem, min(1.8vw, 3vh), 1.5rem);
+    }
+
+    #slide-7 .callout-copy .lead {
+      font-size: clamp(.64rem, min(1.1vw, 1.8vh), .92rem);
+      line-height: 1.6;
+    }
+
+    .submission-box {
+      margin-top: clamp(.25rem, 1vh, .6rem);
+      padding: clamp(.6rem, 1.6vh, 1rem) clamp(.75rem, 1.6vw, 1.1rem);
+      border-left: clamp(.16rem, .3vw, .24rem) solid var(--rose);
+      background: rgb(255 255 255 / 65%);
+    }
+
+    .submission-box p {
+      font-size: clamp(.58rem, min(1vw, 1.65vh), .86rem);
+      line-height: 1.55;
+    }
+
+    .submission-box p + p {
+      margin-top: .45rem;
+    }
+
+    .submission-box strong {
+      color: var(--rose-dark);
+    }
+
+    .submission-box a {
+      color: var(--rose-dark);
+      font-weight: 600;
+      overflow-wrap: anywhere;
+    }
+
+    #slide-7 .callout-tagline {
+      margin-top: auto;
+      font-size: clamp(.68rem, min(1.1vw, 1.8vh), .92rem);
+    }
+
+    #slide-7 .callout-visual {
+      grid-column: 2;
+      grid-row: 1;
+      display: flex;
+      min-height: 0;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: center;
+      gap: clamp(.55rem, 1.5vh, .9rem);
+    }
+
+    .qr-card {
+      display: flex;
+      align-items: center;
+      gap: clamp(.7rem, 2vw, 1.5rem);
+      padding: clamp(.5rem, 1.2vh, .75rem) clamp(.7rem, 1.4vw, 1rem);
+      background: rgb(255 255 255 / 72%);
+    }
+
+    .qr-image {
+      flex: 0 0 auto;
+      width: clamp(5rem, 9vw, 7.2rem);
+      height: clamp(5rem, 9vw, 7.2rem);
+      padding: .25rem;
+      background: var(--white);
+      object-fit: contain;
+      box-shadow: none;
+    }
+
+    .qr-copy {
+      min-width: 0;
+    }
+
+    .qr-copy strong {
+      display: block;
+      color: var(--rose-dark);
+      font-family: var(--font-display);
+      font-size: clamp(.8rem, min(1.35vw, 2.2vh), 1.12rem);
+    }
+
+    .qr-copy span {
+      display: block;
+      margin-top: .25rem;
+      color: var(--muted);
+      font-size: clamp(.56rem, min(.9vw, 1.5vh), .75rem);
+      line-height: 1.45;
+    }
+
+    .reward-panel {
+      grid-column: 1 / -1;
+      grid-row: 2;
+      display: flex;
+      min-height: 0;
+      flex-direction: column;
+      min-height: 0;
+      padding: clamp(.55rem, 1.3vh, .85rem);
+      background: rgb(255 255 255 / 78%);
+    }
+
+    .reward-heading {
+      margin-bottom: .45rem;
+      color: var(--rose-dark);
+      font-family: var(--font-display);
+      font-size: clamp(.78rem, min(1.35vw, 2.1vh), 1.1rem);
+      font-weight: 600;
+    }
+
+    .reward-table-wrap {
+      flex: 1;
+      min-width: 0;
+      overflow-x: auto;
+    }
+
+    .reward-table {
+      width: 100%;
+      height: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      color: var(--ink);
+      font-size: clamp(.49rem, min(.78vw, 1.28vh), .7rem);
+      line-height: 1.35;
+    }
+
+    .reward-table th,
+    .reward-table td {
+      padding: clamp(.28rem, .65vh, .45rem) clamp(.25rem, .55vw, .45rem);
+      border: 1px solid var(--line);
+      vertical-align: middle;
+      overflow-wrap: anywhere;
+    }
+
+    .reward-table th {
+      color: var(--rose-dark);
+      background: var(--pale);
+      font-weight: 700;
+    }
+
+    .reward-table th:nth-child(1),
+    .reward-table td:nth-child(1) { width: 18%; }
+
+    .reward-table th:nth-child(2),
+    .reward-table td:nth-child(2) { width: 46%; }
+
+    .reward-table th:nth-child(3),
+    .reward-table td:nth-child(3) { width: 17%; }
+
+    .reward-table th:nth-child(4),
+    .reward-table td:nth-child(4) { width: 19%; }
+
+    .callout-bottom {
+      grid-column: 1 / -1;
+      grid-row: 3;
+      align-self: end;
+      color: var(--rose-dark);
+      font-family: var(--font-display);
+      font-size: clamp(.72rem, min(1.4vw, 2.3vh), 1.15rem);
+      font-weight: 600;
+    }
+
+    .callout-visual .placeholder-photo {
+      min-height: min(52vh, 400px);
+    }
+
+    .qr-wrap {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      align-items: center;
+      gap: clamp(0.35rem, 1.2vh, 0.7rem);
+    }
+
+    .qr-image {
+      width: min(100%, 286px);
+      max-height: min(50vh, 400px);
+      box-shadow: 0 clamp(0.35rem, 1vh, 0.8rem) clamp(1rem, 2.8vw, 2.4rem) rgb(64 41 46 / 12%);
+    }
+
+    .mascot-image {
+      width: min(100%, 250px);
+      max-height: min(44vh, 350px);
+      align-self: center;
+      object-fit: contain;
+    }
+
+    .scan-label {
+      color: var(--rose-dark);
+      font-size: clamp(0.62rem, min(1.1vw, 1.85vh), 0.92rem);
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .rules {
+      color: var(--muted);
+      font-size: clamp(0.5rem, min(0.74vw, 1.25vh), 0.68rem);
+      text-align: center;
+    }
+
+    /* 覆盖旧版二维码通用尺寸，避免二维码被拉成整块视觉。 */
+    #slide-7 .qr-image {
+      width: clamp(8rem, 11vw, 10rem);
+      height: clamp(8rem, 11vw, 10rem);
+      max-height: none;
+      box-shadow: none;
+    }
+
+    /* ===========================================
+       小屏和矮屏适配：优先保证横屏演示完整
+       =========================================== */
+    @media (max-width: 900px), (max-height: 600px) {
+      :root {
+        --page-x: clamp(1rem, 4vw, 2.4rem);
+        --page-top: clamp(2.8rem, 12vh, 4.2rem);
+        --page-bottom: clamp(1.8rem, 6.5vh, 2.8rem);
+      }
+
+      .masthead {
+        top: clamp(0.55rem, 2.5vh, 1rem);
+      }
+
+      .cover-copy {
+        padding-right: clamp(1rem, 3vw, 2rem);
+      }
+
+      .profile-grid {
+        grid-template-columns: 32% 1fr;
+      }
+
+      .review-grid {
+        grid-template-columns: 48% 1fr;
+      }
+
+      .relay-layout {
+        grid-template-columns: 32% 1fr;
+      }
+
+      .callout-grid {
+        grid-template-columns: 52% 1fr;
+      }
+
+      .values-line {
+        bottom: clamp(0.3rem, 1vh, 0.55rem);
+      }
+
+      .nav-dots {
+        display: none;
+      }
+    }
+
+    @media (max-width: 680px) and (orientation: portrait) {
+      .cover-copy {
+        width: 100%;
+        justify-content: flex-end;
+        padding-bottom: clamp(2.4rem, 8vh, 4.5rem);
+        background: linear-gradient(0deg, var(--warm) 0%, rgb(247 239 239 / 94%) 64%, rgb(247 239 239 / 10%) 100%);
+      }
+
+      .cover-photo {
+        inset: 0;
+        background-position: center 28%;
+      }
+
+      .cover-title,
+      .cover-quote {
+        max-width: 100%;
+      }
+
+      .toc-grid {
+        grid-template-columns: 1fr;
+        margin-top: clamp(0.6rem, 2vh, 1rem);
+      }
+
+      .toc-item {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: clamp(0.5rem, 2vw, 1rem);
+        align-items: center;
+        padding: clamp(0.45rem, 1.5vh, 0.8rem) 0;
+        border-top: 1px solid var(--line);
+        border-left: 0;
+      }
+
+      .toc-title,
+      .toc-desc,
+      .toc-page {
+        margin-top: 0;
+      }
+
+      .toc-desc {
+        display: none;
+      }
+
+      .decode-grid {
+        grid-template-columns: 1fr;
+        gap: clamp(0.65rem, 2.5vh, 1.2rem);
+        margin-top: clamp(0.7rem, 2.5vh, 1.4rem);
+      }
+
+      .profile-grid,
+      .review-grid,
+      .relay-layout,
+      .echo-bottom,
+      .callout-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-photo,
+      .rose-art,
+      .mascot-image {
+        display: none;
+      }
+
+      .relay-total {
+        padding-right: 0;
+        padding-bottom: clamp(0.55rem, 2vh, 1rem);
+        border-right: 0;
+        border-bottom: 1px solid var(--dark-line);
+      }
+
+      .relay-text {
+        margin-top: clamp(0.5rem, 1.5vh, 0.8rem);
+      }
+
+      .callout-visual {
+        grid-template-columns: 1fr;
+      }
+
+      #slide-7 .callout-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        align-content: start;
+        gap: .55rem;
+      }
+
+      #slide-7 .callout-copy,
+      #slide-7 .callout-visual,
+      #slide-7 .reward-panel,
+      #slide-7 .callout-bottom {
+        grid-column: 1;
+      }
+
+      #slide-7 .callout-visual {
+        justify-content: flex-start;
+      }
+
+      #slide-7 .callout-copy { grid-row: 1; }
+      #slide-7 .callout-visual { grid-row: 2; }
+      #slide-7 .reward-panel { grid-row: 3; }
+      #slide-7 .callout-bottom { grid-row: 4; }
+
+      .callout-bottom {
+        margin-top: .15rem;
+        font-size: .62rem;
+      }
+
+      #slide-7 .slide-content {
+        padding-top: 3.25rem;
+      }
+
+      #slide-7 .callout-grid {
+        gap: .55rem;
+      }
+
+      #slide-7 .callout-question {
+        margin-top: .2rem;
+        font-size: .78rem;
+        line-height: 1.42;
+      }
+
+      #slide-7 .callout-copy .lead,
+      #slide-7 .submission-box p {
+        font-size: .56rem;
+        line-height: 1.38;
+      }
+
+      #slide-7 .callout-visual {
+        gap: .35rem;
+      }
+
+      .qr-card {
+        gap: .55rem;
+        padding: .35rem .5rem;
+      }
+
+      #slide-7 .qr-image {
+        width: 4.2rem;
+        height: 4.2rem;
+      }
+
+      .qr-copy strong {
+        font-size: .68rem;
+      }
+
+      .qr-copy span,
+      .reward-heading {
+        font-size: .52rem;
+      }
+
+      .reward-panel {
+        padding: .35rem;
+      }
+
+      .reward-table {
+        font-size: .43rem;
+        line-height: 1.25;
+      }
+
+      .reward-table th,
+      .reward-table td {
+        padding: .2rem .16rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal,
+      .reveal-left,
+      .cover-photo,
+      .profile-photo,
+      .rose-art {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 全局演示控制 -->
+  <div class="progress-track" aria-hidden="true"><div class="progress-bar" id="progressBar"></div></div>
+  <nav class="nav-dots" id="navDots" aria-label="幻灯片导航"></nav>
+  <button class="fullscreen-button" id="fullscreenButton" type="button" title="切换全屏" aria-label="切换全屏">⛶</button>
+  <div class="sr-only" id="pageStatus" aria-live="polite">第 1 页，共 7 页</div>
+
+  <main>
+    <!-- 01 封面 -->
+    <section class="slide cover" id="slide-1" aria-label="封面：李涛访谈">
+      <div class="cover-photo" role="img" aria-label="李涛人物照片"><img src="./assets/李涛.png" alt="李涛人物照片"></div>
+      <div class="cover-copy">
+        <div class="cover-brand reveal-left" style="--order: 0">玫瑰文化一刻</div>
+        <div class="eyebrow reveal-left" style="--order: 1">让文化落到你的日常</div>
+        <div class="cover-volume reveal-left" style="--order: 2">VOL.07&nbsp;&nbsp;/&nbsp;&nbsp;爱与成就</div>
+        <h1 class="cover-title reveal-left" style="--order: 3">抖音开店--7次驳回之后，<br>他把路走通</h1>
+        <p class="cover-subtitle reveal-left" style="--order: 4">运营中心--李涛｜人物专访</p>
+        <div class="cover-rule reveal-left" style="--order: 5" aria-hidden="true"></div>
+        <blockquote class="cover-quote reveal-left" style="--order: 6">“这个事情，我必须得先干下去。”</blockquote>
+        <p class="cover-date reveal-left" style="--order: 7">2026.10</p>
+      </div>
+    </section>
+
+    <!-- 02 本期目录 -->
+    <section class="slide" id="slide-2" aria-label="本期目录">
+      <header class="masthead"><span class="brand">玫瑰文化一刻</span><span class="section-label">CONTENTS&nbsp;&nbsp;本期目录</span><span class="page-number">02 / 07</span></header>
+      <div class="slide-content">
+        <div class="contents-intro">
+        <h2 class="slide-title reveal" style="--order: 0">抖音开店--7次驳回之后，他把路走通</h2>
+          <p class="lead reveal" style="--order: 1">从价值观解码，到开店与直播交付，再回到每个人都能参与的团队日常。</p>
+        </div>
+        <div class="toc-grid">
+          <button class="toc-item reveal" style="--order: 2" type="button" data-go="2" aria-label="前往第 3 页，文化解码"><span class="toc-num">01</span><span class="toc-title">文化解码</span><span class="toc-desc">爱与成就｜风雨并肩扛，顶峰共荣光</span><span class="toc-page">P.03</span></button>
+          <button class="toc-item reveal" style="--order: 3" type="button" data-go="3" aria-label="前往第 4 页，玫瑰故事"><span class="toc-num">02</span><span class="toc-title">玫瑰故事</span><span class="toc-desc">抖音开店｜7次驳回之后，他把路走通</span><span class="toc-page">P.04—05</span></button>
+          <button class="toc-item reveal" style="--order: 4" type="button" data-go="5" aria-label="前往第 6 页，人物分享"><span class="toc-num">03</span><span class="toc-title">人物分享</span><span class="toc-desc">从“我先干下去”到“大家一起变强”</span><span class="toc-page">P.06</span></button>
+        </div>
+      </div>
+      <footer class="values-line">以心为本&nbsp;&nbsp;｜&nbsp;&nbsp;极致引领&nbsp;&nbsp;｜&nbsp;&nbsp;爱与成就</footer>
+    </section>
+
+    <!-- 03 文化解码 -->
+    <section class="slide" id="slide-3" aria-label="爱与成就文化解码">
+      <header class="masthead"><span class="brand">玫瑰文化一刻</span><span class="section-label">PART 01&nbsp;&nbsp;文化解码</span><span class="page-number">03 / 07</span></header>
+      <div class="slide-content">
+        <div class="values-center reveal" style="--order: 0">
+          <p class="eyebrow">本期主价值观</p>
+          <h2>爱与成就</h2>
+          <p class="formal-lead">以爱为底色，以成就为交付</p>
+          <p class="formal-copy">爱不是讨好，是尊重与善意；不透支用户信任。<br>用我们的专业成就用户之美，让用户变得更美、更稳、更自由。</p>
+        </div>
+        <div class="decode-grid">
+          <article class="decode-block reveal" style="--order: 1"><h3>风雨并肩扛</h3><p class="body-copy">遇到任务和困难，不只守着自己的分工；主动沟通、及时补位，把伙伴的事当作团队的事，一起把结果接住。李涛先把难事接过来，团队才有了继续往前的空间。</p></article>
+          <article class="decode-block reveal" style="--order: 2"><h3>顶峰共荣光</h3><p class="body-copy">看见彼此的努力，及时给予鼓励和认可；愿意分享经验、让出资源、成就伙伴，让一次个人行动变成团队共同的能力。</p></article>
+        </div>
+        <p class="reflection reveal" style="--order: 3">爱与成就，让困难变成经历，让经历成为经验，最后大家一起变得更强。</p>
+      </div>
+      <footer class="values-line">以心为本&nbsp;&nbsp;｜&nbsp;&nbsp;极致引领&nbsp;&nbsp;｜&nbsp;&nbsp;爱与成就</footer>
+    </section>
+
+    <!-- 04 开店事实 -->
+    <section class="slide profile" id="slide-4" aria-label="开店时间线与事实">
+      <header class="masthead"><span class="brand">玫瑰文化一刻</span><span class="section-label">PART 02&nbsp;&nbsp;玫瑰故事</span><span class="page-number">04 / 07</span></header>
+      <div class="slide-content">
+        <h2 class="slide-title reveal" style="--order: 0">开店不是一个结果，是一条被走通的路</h2>
+        <div class="fact-grid">
+          <div class="fact-copy">
+            <blockquote class="profile-quote reveal" style="--order: 1">“如果这个事情没做完的话，对于我来说是焦虑的，吃饭都吃不下，睡觉都睡不着。”</blockquote>
+            <p class="body-copy reveal" style="--order: 2">这是李涛回忆抖音店铺筹备时最直接的一句话。一次开店，背后牵动的是平台审核、品牌授权、商品链接、库存条码、跨境仓储和直播节奏。面对多次驳回、多个店铺和多个直播节点并行推进，他和伙伴们没有停在“条件太复杂”，而是把问题拆开、逐个解决，并在过程中彼此托底、共同成长。一个人先把路走通，再让更多伙伴少走弯路，这正是【爱与成就】的真实发生。</p>
+            <p class="body-copy reveal" style="--order: 3">抖音开店从 9 月下旬开始筹备。平台审核严格，资料一旦出现问题，前面已经通过的部分也可能需要重新审核。临近直播时，店铺还没有完全跑通，链接、商品和活动又接踵而来。李涛当时承担了店铺、平台和内部协同的主要工作，和团队内小伙伴一起，把一项项看似琐碎的事情重新排出顺序：哪些资料要补，哪些信息要确认，哪些节点必须提前预留时间。</p>
+            <p class="body-copy muted reveal" style="--order: 4">他说：“这个事情，我必须得先干下去。”先接住责任，再拆分任务；面对未知先行动、再沉淀，让团队更有继续向前的确定感。</p>
+          </div>
+          <div class="fact-evidence">
+            <div class="fact-stats reveal" style="--order: 2"><div class="fact-stat"><strong>15天</strong><span>跨境店｜10个工作日</span></div><div class="fact-stat"><strong>9天</strong><span>大贸店｜7个工作日</span></div><div class="fact-stat"><strong>7次</strong><span>双店驳回</span></div><div class="fact-stat"><strong>9次</strong><span>重新提交</span></div></div>
+            <figure class="evidence-figure timeline-figure reveal" style="--order: 4"><img src="./assets/抖音开店曲折时间线-裁切.png" alt="抖音开店从申请、驳回、重新提交到 9 月 14 日下店的曲折时间线"></figure>
+          </div>
+        </div>
+      </div>
+      <footer class="values-line">以心为本&nbsp;&nbsp;｜&nbsp;&nbsp;极致引领&nbsp;&nbsp;｜&nbsp;&nbsp;爱与成就</footer>
+    </section>
+
+    <!-- 05 链接交付 -->
+    <section class="slide" id="slide-5" aria-label="链接与直播交付数据">
+      <header class="masthead"><span class="brand">玫瑰文化一刻</span><span class="section-label">PART 02&nbsp;&nbsp;玫瑰故事</span><span class="page-number">05 / 07</span></header>
+      <div class="slide-content">
+        <h2 class="slide-title reveal" style="--order: 0">死磕细节：把每条链接做到可交付</h2>
+        <div class="fact-grid">
+          <div class="delivery-copy">
+            <p class="body-copy reveal" style="--order: 1">这次双十一 T 播相关商品链接约 <strong>400 条</strong>，其中约 <strong>100 条</strong>需要团队自建，约 <strong>300 条</strong>涉及品牌代发。每一条链接都要确认主图、编码、条码、库存、价格和发货时间；一个产品可能有多个条码，图片和实际发货商品也必须一一对应。看起来只是“建链接”，实际牵动的是平台规则、商品信息和用户收到货时的完整体验。</p>
+            <p class="body-copy reveal" style="--order: 2">李涛和团队把这些细节逐项核对，把过去需要十几天的平台活动报名，逐步压缩到三四天左右。速度的背后，不是降低标准，而是把踩过的坑变成方法，把零散经验变成流程，把一次次确认变成下一次可以复用的底气。</p>
+            <p class="body-copy reveal" style="--order: 3">李涛提到，团队在平台上同时承担商家、买手、代发等多重角色，也会主动研究品牌尚未使用过的平台功能，再把操作方法讲清楚、带着伙伴一起用。曾经需要从零摸索的功能，如今可以通过经验传递，帮助更多品牌和同事更快上手。</p>
+            <p class="body-copy muted reveal" style="--order: 4">从“我来处理”到“我们都会做”，一次项目的价值才真正被留下。</p>
+          </div>
+          <div class="delivery-evidence">
+            <div class="fact-stats reveal" style="--order: 2"><div class="fact-stat"><strong>400+</strong><span>双十一 T 播总链接</span></div><div class="fact-stat"><strong>100+ / 300+</strong><span>自建 / 品牌代发</span></div><div class="fact-stat"><strong>280+</strong><span>小红书直播总链接</span></div><div class="fact-stat"><strong>80+ / 200+</strong><span>自主制作 / 代发上架</span></div></div>
+            <figure class="evidence-figure reveal" style="--order: 5"><img src="./assets/玫瑰旗舰店-开通.png" alt="Rose's Rose旗舰店开通截图"><figcaption>过程记录：9/10 Rose's Rose 旗舰店通过审核并开通。</figcaption></figure>
+          </div>
+        </div>
+      </div>
+      <footer class="values-line">以心为本&nbsp;&nbsp;｜&nbsp;&nbsp;极致引领&nbsp;&nbsp;｜&nbsp;&nbsp;爱与成就</footer>
+    </section>
+
+    <!-- 06 人物分享 -->
+    <section class="slide" id="slide-6" aria-label="人物分享">
+      <header class="masthead"><span class="brand">玫瑰文化一刻</span><span class="section-label">PART 02&nbsp;&nbsp;人物分享</span><span class="page-number">06 / 07</span></header>
+      <div class="slide-content">
+        <h2 class="slide-title reveal" style="--order: 0">来自故事人物的亲身分享</h2>
+        <div class="interview-layout">
+          <div class="quote-stack">
+            <blockquote class="echo-quote reveal" style="--order: 1">“这次双十一给我最大的感受是，很多事情不是一个人能完成的。大家一起努力、一起扛、一起把问题解决掉，最后还是能够把事情往前推。可能结果不一定马上达到最初的预期，但至少我们知道自己还可以继续往前走。”</blockquote>
+            <blockquote class="echo-quote reveal" style="--order: 2">“我觉得抖音开店的learning，最大的一个就是真实性。不管是盖章、签字，还是品牌授权资料，都必须真实、清晰、完整。尤其是抖音的审核，一个章上面的英文如果有一点点瑕疵，它都可能不认，就要重新去盖，整个周期也会被拉长。我后来总结的一点就是，前期拿资料的时候一定要更严谨。不要想着先提交上去，后面再慢慢补。因为有些品牌一个月可能只能盖一两次章，如果前面没有按照平台要求准备好，后面每一次驳回，都会把整个周期往后推。”</blockquote>
+            <blockquote class="echo-quote reveal" style="--order: 3">“现在再做类似的事情，效率会比之前高很多。因为我们已经把前面总结出来的经验留下来了，平台的规则熟悉了，内部的配合也更顺了。以前一个事情可能要花十几天，现在有些环节三四天就可以完成。经验留下来之后，下一次就不用再从零开始。”</blockquote>
+            <p class="body-copy muted reveal" style="--order: 4">从“我来处理”到“我们都会做”，一次项目的价值才真正被留下。经验被交给伙伴，方法被留给团队，下一次出发就多了一份底气。</p>
+          </div>
+          <div class="quote-side"><div class="interview-photo reveal" style="--order: 2"><img src="./assets/李涛.png" alt="李涛人物照片"></div><p class="body-copy muted reveal" style="--order: 4; text-align:center">运营中心&nbsp;&nbsp;店铺运营部<br>红书运营--李涛</p></div>
+        </div>
+      </div>
+      <footer class="values-line">以心为本&nbsp;&nbsp;｜&nbsp;&nbsp;极致引领&nbsp;&nbsp;｜&nbsp;&nbsp;爱与成就</footer>
+    </section>
+
+    <!-- 07 文化一刻征集 -->
+    <section class="slide callout" id="slide-7" aria-label="文化一刻征集">
+      <header class="masthead"><span class="brand">玫瑰文化一刻</span><span class="section-label">PART 03&nbsp;&nbsp;文化一刻征集</span><span class="page-number">07 / 07</span></header>
+      <div class="slide-content">
+        <div class="callout-grid">
+          <div class="callout-copy"><h2 class="slide-title accent reveal" style="--order: 0">案例征集--你看见的玫瑰文化一刻</h2><p class="callout-question reveal" style="--order: 1">一次补位，一次鼓励，<br>一句有力量的话<br>一次经验传递，都会让团队走得更稳、更远。</p><p class="lead reveal" style="--order: 2">你看见的文化一刻，也许只是一个伙伴主动接住了一件难事，或是把自己走过的路讲给后来的人听。</p><div class="submission-box reveal" style="--order: 3"><p><strong>投稿方式：</strong>扫码填写案例，或发送至 HR 邮箱（<a href="mailto:aroseisarosehr@aroseisarose.cn">aroseisarosehr@aroseisarose.cn</a>）分享。</p><p><strong>参与福利：</strong>投稿即有精美礼品，优秀案例将收录进《玫瑰文化一刻》，让更多伙伴看到。</p></div></div>
+          <div class="callout-visual"><div class="qr-card reveal" style="--order: 2"><img class="qr-image" src="./assets/案例征集二维码.png" alt="案例征集二维码"><div class="qr-copy"><strong>扫码填写案例</strong><span>分享你看见的玫瑰文化一刻</span></div></div></div>
+          <div class="reward-panel reveal" style="--order: 3"><div class="reward-heading">参与投稿与奖励</div><div class="reward-table-wrap"><table class="reward-table"><thead><tr><th>类型</th><th>规则说明</th><th>奖励产品档位</th><th>奖励产品</th></tr></thead><tbody><tr><td>参与投稿</td><td>完整填写表单，填写内容符合价值观导向，即可获得小礼物一份。</td><td>第一档</td><td>文化周边</td></tr><tr><td>投稿录用</td><td>完成投稿并录用成为稿件素材，案例达到价值观牵引作用，符合玫瑰是玫瑰的使命与愿景，可获得精美礼物一份。</td><td>第二档</td><td>玫瑰精品 OEM</td></tr><tr><td>标杆个人</td><td>参与稿件撰写、配合访谈，可获得精美 OEM 一份。</td><td>第三档</td><td>玫瑰精品 OEM</td></tr></tbody></table></div></div>
+          <p class="callout-bottom reveal" style="--order: 4">欢迎分享你看见的真实文化一刻。</p>
+        </div>
+      </div>
+      <footer class="values-line">以心为本&nbsp;&nbsp;｜&nbsp;&nbsp;极致引领&nbsp;&nbsp;｜&nbsp;&nbsp;爱与成就</footer>
+    </section>
+  </main>
+
+  <script>
+    /* ===========================================
+       幻灯片控制器：键盘、滚轮、触控、目录和页点
+       =========================================== */
+    class SlidePresentation {
+      constructor() {
+        this.slides = Array.from(document.querySelectorAll('.slide'));
+        this.currentSlide = 0;
+        this.wheelLocked = false;
+        this.touchStartY = 0;
+        this.touchStartX = 0;
+        this.progressBar = document.getElementById('progressBar');
+        this.navDots = document.getElementById('navDots');
+        this.pageStatus = document.getElementById('pageStatus');
+        this.reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        this.createNavDots();
+        this.setupObserver();
+        this.setupKeyboard();
+        this.setupWheel();
+        this.setupTouch();
+        this.setupJumpLinks();
+        this.setupFullscreen();
+        this.updateUI(0);
+      }
+
+      createNavDots() {
+        this.slides.forEach((slide, index) => {
+          const dot = document.createElement('button');
+          dot.type = 'button';
+          dot.className = 'nav-dot';
+          dot.setAttribute('aria-label', `前往第 ${index + 1} 页`);
+          dot.title = `第 ${index + 1} 页`;
+          dot.addEventListener('click', () => this.goTo(index));
+          this.navDots.appendChild(dot);
+        });
+      }
+
+      setupObserver() {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && entry.intersectionRatio >= 0.58) {
+              const index = this.slides.indexOf(entry.target);
+              this.currentSlide = index;
+              entry.target.classList.add('visible');
+              this.updateUI(index);
+              this.animateCounter(entry.target);
+            }
+          });
+        }, { threshold: [0.58] });
+
+        this.slides.forEach((slide) => observer.observe(slide));
+        this.slides[0].classList.add('visible');
+      }
+
+      setupKeyboard() {
+        document.addEventListener('keydown', (event) => {
+          if (['ArrowDown', 'ArrowRight', 'PageDown', ' '].includes(event.key)) {
+            event.preventDefault();
+            this.next();
+          } else if (['ArrowUp', 'ArrowLeft', 'PageUp'].includes(event.key)) {
+            event.preventDefault();
+            this.previous();
+          } else if (event.key === 'Home') {
+            event.preventDefault();
+            this.goTo(0);
+          } else if (event.key === 'End') {
+            event.preventDefault();
+            this.goTo(this.slides.length - 1);
+          }
+        });
+      }
+
+      setupWheel() {
+        window.addEventListener('wheel', (event) => {
+          if (Math.abs(event.deltaY) < Math.abs(event.deltaX) || Math.abs(event.deltaY) < 18) return;
+          event.preventDefault();
+          if (this.wheelLocked) return;
+          this.wheelLocked = true;
+          event.deltaY > 0 ? this.next() : this.previous();
+          window.setTimeout(() => { this.wheelLocked = false; }, this.reduceMotion ? 260 : 720);
+        }, { passive: false });
+      }
+
+      setupTouch() {
+        window.addEventListener('touchstart', (event) => {
+          const touch = event.changedTouches[0];
+          this.touchStartY = touch.clientY;
+          this.touchStartX = touch.clientX;
+        }, { passive: true });
+
+        window.addEventListener('touchend', (event) => {
+          const touch = event.changedTouches[0];
+          const deltaY = this.touchStartY - touch.clientY;
+          const deltaX = this.touchStartX - touch.clientX;
+          if (Math.abs(deltaY) > 44 && Math.abs(deltaY) > Math.abs(deltaX)) {
+            deltaY > 0 ? this.next() : this.previous();
+          }
+        }, { passive: true });
+      }
+
+      setupJumpLinks() {
+        document.querySelectorAll('[data-go]').forEach((button) => {
+          button.addEventListener('click', () => this.goTo(Number(button.dataset.go)));
+        });
+      }
+
+      setupFullscreen() {
+        const button = document.getElementById('fullscreenButton');
+        button.addEventListener('click', async () => {
+          try {
+            if (!document.fullscreenElement) {
+              await document.documentElement.requestFullscreen();
+            } else {
+              await document.exitFullscreen();
+            }
+          } catch (error) {
+            console.warn('当前浏览器未能进入全屏模式。', error);
+          }
+        });
+      }
+
+      animateCounter(slide) {
+        const counter = slide.querySelector('[data-count]');
+        if (!counter || counter.dataset.played === 'true') return;
+        counter.dataset.played = 'true';
+        if (this.reduceMotion) return;
+
+        const target = Number(counter.dataset.count);
+        const duration = 620;
+        const start = performance.now();
+        counter.textContent = '0';
+
+        const tick = (now) => {
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          counter.textContent = String(Math.round(target * eased));
+          if (progress < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      }
+
+      updateUI(index) {
+        const dots = Array.from(this.navDots.children);
+        dots.forEach((dot, dotIndex) => dot.setAttribute('aria-current', String(dotIndex === index)));
+        this.progressBar.style.width = `${((index + 1) / this.slides.length) * 100}%`;
+        this.pageStatus.textContent = `第 ${index + 1} 页，共 ${this.slides.length} 页`;
+      }
+
+      goTo(index) {
+        const clamped = Math.max(0, Math.min(index, this.slides.length - 1));
+        const distance = Math.abs(clamped - this.currentSlide);
+        const behavior = this.reduceMotion || distance > 1 ? 'auto' : 'smooth';
+        this.currentSlide = clamped;
+        this.slides[clamped].scrollIntoView({ behavior, block: 'start' });
+        this.updateUI(clamped);
+      }
+
+      next() {
+        this.goTo(this.currentSlide + 1);
+      }
+
+      previous() {
+        this.goTo(this.currentSlide - 1);
+      }
+    }
+
+    window.presentation = new SlidePresentation();
+  </script>
+</body>
+</html>

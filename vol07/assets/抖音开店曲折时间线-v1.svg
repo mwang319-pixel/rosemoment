@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">抖音开店曲折时间线</title>
+  <desc id="desc">从 8 月 31 日提交到 9 月 14 日下店，包含 7 次驳回和 9 次重新提交。</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#7b4a57" flood-opacity="0.14"/>
+    </filter>
+    <linearGradient id="paper" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fffdfd"/>
+      <stop offset="1" stop-color="#fdf0f3"/>
+    </linearGradient>
+    <linearGradient id="route" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#8e1837"/>
+      <stop offset="0.52" stop-color="#d93f6b"/>
+      <stop offset="1" stop-color="#8e1837"/>
+    </linearGradient>
+    <style>
+      .serif { font-family: 'Noto Serif SC', 'Songti SC', serif; }
+      .sans { font-family: 'Noto Sans SC', 'PingFang SC', sans-serif; }
+      .ink { fill: #33272a; }
+      .muted { fill: #74676a; }
+      .rose { fill: #8e1837; }
+      .pink { fill: #d93f6b; }
+      .white { fill: #fff; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="#fbf4f5"/>
+  <path d="M0 130 C260 80 430 170 690 112 S1160 80 1600 150" fill="none" stroke="#f2d6dd" stroke-width="2"/>
+  <path d="M0 760 C280 700 430 820 720 748 S1200 720 1600 790" fill="none" stroke="#f2d6dd" stroke-width="2"/>
+
+  <g transform="translate(94 70)">
+    <text class="sans rose" font-size="22" letter-spacing="4">玫瑰文化一刻 · 李涛访谈</text>
+    <text class="serif ink" font-size="58" font-weight="600" y="78">一开店，先走过 7 次驳回</text>
+    <text class="sans muted" font-size="24" y="122">抖音开店从申请、补资料，到把直播节点重新排回可交付的轨道</text>
+  </g>
+
+  <g transform="translate(112 246)" filter="url(#shadow)">
+    <rect width="1376" height="470" rx="28" fill="url(#paper)" stroke="#ead9de" stroke-width="2"/>
+    <rect x="34" y="32" width="1308" height="64" rx="18" fill="#fff3f5"/>
+    <text class="sans rose" x="66" y="73" font-size="23" font-weight="600">关键过程 · 日期按已确认时间线整理</text>
+    <text class="sans muted" x="1010" y="73" font-size="20">7 次驳回  ·  9 次重新提交</text>
+
+    <!-- 曲折路径：用高低起伏表达反复审核与重新提交 -->
+    <path d="M96 284 C158 284 162 184 230 184 S302 334 370 334 S442 174 510 174 S582 320 652 320 S724 206 792 206 S864 330 936 330 S1012 204 1084 204" fill="none" stroke="#f1d7de" stroke-width="18" stroke-linecap="round"/>
+    <path d="M96 284 C158 284 162 184 230 184 S302 334 370 334 S442 174 510 174 S582 320 652 320 S724 206 792 206 S864 330 936 330 S1012 204 1084 204" fill="none" stroke="url(#route)" stroke-width="7" stroke-linecap="round"/>
+
+    <!-- 8/31 -->
+    <g transform="translate(96 284)
+      ">
+      <circle r="18" fill="#fff" stroke="#8e1837" stroke-width="7"/>
+      <circle r="6" fill="#d93f6b"/>
+      <g transform="translate(-42 62)">
+        <text class="sans rose" font-size="25" font-weight="700">8/31</text>
+        <text class="sans ink" font-size="20" y="31">跨境店提交</text>
+        <text class="sans muted" font-size="17" y="58">开店申请发出</text>
+      </g>
+    </g>
+
+    <!-- 9/1 -->
+    <g transform="translate(230 184)">
+      <circle r="18" fill="#fff" stroke="#8e1837" stroke-width="7"/>
+      <circle r="6" fill="#d93f6b"/>
+      <g transform="translate(-38 -76)">
+        <text class="sans rose" font-size="25" font-weight="700">9/1</text>
+        <text class="sans ink" font-size="20" y="31">大贸店提交</text>
+        <text class="sans muted" font-size="17" y="58">双店并行启动</text>
+      </g>
+    </g>
+
+    <!-- 7 rejections badge -->
+    <g transform="translate(370 334)">
+      <circle r="22" fill="#8e1837"/>
+      <text class="sans white" x="-12" y="8" font-size="20" font-weight="700">!</text>
+      <g transform="translate(-74 72)">
+        <rect width="180" height="68" rx="16" fill="#8e1837"/>
+        <text class="sans white" x="18" y="29" font-size="21" font-weight="700">驳回 ×7</text>
+        <text class="sans white" x="18" y="53" font-size="16" opacity="0.85">反复补资料、重走审核</text>
+      </g>
+    </g>
+
+    <!-- 9/8 -->
+    <g transform="translate(510 174)">
+      <circle r="18" fill="#fff" stroke="#8e1837" stroke-width="7"/>
+      <circle r="6" fill="#d93f6b"/>
+      <g transform="translate(-44 -76)">
+        <text class="sans rose" font-size="25" font-weight="700">9/8</text>
+        <text class="sans ink" font-size="20" y="31">羊绒店提交</text>
+        <text class="sans muted" font-size="17" y="58">资料再次递交</text>
+      </g>
+    </g>
+
+    <!-- 9 submissions -->
+    <g transform="translate(652 320)">
+      <circle r="22" fill="#d93f6b"/>
+      <text class="sans white" x="-9" y="8" font-size="18" font-weight="700">↻</text>
+      <g transform="translate(-70 72)">
+        <rect width="174" height="68" rx="16" fill="#d93f6b"/>
+        <text class="sans white" x="18" y="29" font-size="21" font-weight="700">重提 ×9</text>
+        <text class="sans white" x="18" y="53" font-size="16" opacity="0.88">一次次把问题做实</text>
+      </g>
+    </g>
+
+    <!-- 9/9 -->
+    <g transform="translate(792 206)">
+      <circle r="18" fill="#fff" stroke="#8e1837" stroke-width="7"/>
+      <circle r="6" fill="#d93f6b"/>
+      <g transform="translate(-44 -76)">
+        <text class="sans rose" font-size="25" font-weight="700">9/9</text>
+        <text class="sans ink" font-size="20" y="31">大贸店开通</text>
+        <text class="sans muted" font-size="17" y="58">7 个工作日</text>
+      </g>
+    </g>
+
+    <!-- 9/10 -->
+    <g transform="translate(936 330)">
+      <circle r="18" fill="#fff" stroke="#8e1837" stroke-width="7"/>
+      <circle r="6" fill="#d93f6b"/>
+      <g transform="translate(-48 62)">
+        <text class="sans rose" font-size="25" font-weight="700">9/10</text>
+        <text class="sans ink" font-size="20" y="31">羊绒店开通</text>
+        <text class="sans muted" font-size="17" y="58">审核通过</text>
+      </g>
+    </g>
+
+    <!-- 9/14 下店 -->
+    <g transform="translate(1084 204)">
+      <circle r="25" fill="#8e1837" stroke="#fff" stroke-width="6"/>
+      <path d="M-9 1 l7 7 14-17" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <g transform="translate(-48 -76)">
+        <text class="sans rose" font-size="25" font-weight="700">9/14</text>
+        <text class="sans ink" font-size="20" y="31">跨境店下店</text>
+        <text class="sans muted" font-size="17" y="58">10 个工作日</text>
+      </g>
+    </g>
+
+  </g>
+
+  <g transform="translate(112 784)">
+    <text class="sans rose" font-size="20" font-weight="600">爱与成就</text>
+    <text class="sans muted" x="144" font-size="20">以爱为底色，以成就为交付</text>
+    <text class="sans muted" x="1030" font-size="16">数据口径：访谈整理稿 · 关键节点版</text>
+  </g>
+</svg>
